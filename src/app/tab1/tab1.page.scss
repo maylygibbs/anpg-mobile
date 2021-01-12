@@ -2,6 +2,9 @@ ion-content ion-toolbar {
   --background: translucent;  
 }
 
+ion-icon {
+  --ionicon-stroke-width: 48px;
+}
 
 #Group_1765 {
   position: absolute;
@@ -20,12 +23,11 @@ ion-content ion-toolbar {
   background-color: silver;    
 }
 
-
 .card-button {
-  width:150px;
-  height:150px;
+  width:120px;
+  height:120px;
   background-color: silver;  
-  left:30%
+  left:25%
 }
 
 .card-button-text {
@@ -34,4 +36,33 @@ ion-content ion-toolbar {
 .card-button-img {
   padding: 20px;
   color:black!important;
+}
+
+.card-button-top, .card-button-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mapa-interativo-button {
+  --min-height: 48px;
+    --background: var(--ion-item-background, var(--ion-background-color, #fff));
+    --background-activated: silver;
+    --background-focused: silver!important;
+    --background-hover: currentColor;
+    --background-activated-opacity: 0;
+    --background-focused-opacity: 0.00;
+    --background-hover-opacity: 0.00;
+    --transition: opacity 15ms linear, background-color 15ms linear;
+    --padding-start: 16px;
+    --color: var(--ion-item-color, var(--ion-text-color, #000));
+    --border-color: var(--ion-item-border-color, var(--ion-border-color, var(--ion-color-step-150, rgba(0, 0, 0, 0.13))));
+    --inner-padding-end: 16px;
+    --inner-border-width: 0 0 1px 0;
+    --highlight-height: 2px;
+    --highlight-color-focused: var(--ion-color-primary, #3880ff);
+    --highlight-color-valid: var(--ion-color-success, #2dd36f);
+    --highlight-color-invalid: var(--ion-color-danger, #eb445a);
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: none;
 }
