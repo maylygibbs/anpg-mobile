@@ -1,5 +1,5 @@
 ion-content {
-  --background: gray;
+  --background: gray url('../../assets/img/angola2x.png') no-repeat center center / cover;
 }
 
 ion-content ion-toolbar {
@@ -8,6 +8,7 @@ ion-content ion-toolbar {
 
 ion-icon {
   --ionicon-stroke-width: 48px;
+  --ionicon-stroke-color: red;
 }
 
 #Group_1765 {
