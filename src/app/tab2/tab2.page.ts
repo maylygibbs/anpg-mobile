@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
-import { Photo, PhotoService } from '../services/photo.service';
 
 @Component({
   selector: 'app-tab2',
@@ -9,31 +7,36 @@ import { Photo, PhotoService } from '../services/photo.service';
 })
 export class Tab2Page {
 
-  constructor(public photoService: PhotoService, public actionSheetController: ActionSheetController) {}
+  searchQuery: string = '';
+  items: string[];
 
-  async ngOnInit() {
-    await this.photoService.loadSaved();
+  constructor() {
+    this.initializeItems();
   }
 
-  public async showActionSheet(photo: Photo, position: number) {
-    const actionSheet = await this.actionSheetController.create({
-      header: 'Photos',
-      buttons: [{
-        text: 'Delete',
-        role: 'destructive',
-        icon: 'trash',
-        handler: () => {
-          this.photoService.deletePicture(photo, position);
-        }
-      }, {
-        text: 'Cancel',
-        icon: 'close',
-        role: 'cancel',
-        handler: () => {
-          // Nothing to do, action sheet is automatically closed
-         }
-      }]
-    });
-    await actionSheet.present();
+  initializeItems() {
+    this.items = [
+      'petroleo',
+      'poço',
+      'produção',
+      'licitações',
+      'notícias'    
+    ];
   }
+
+  getItems(ev: any) {
+    // Reset items back to all of the items
+    this.initializeItems();
+
+    // set val to the value of the searchbar
+    const val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.items = this.items.filter((item) => {
+        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }  
+
 }

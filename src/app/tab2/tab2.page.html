@@ -1,18 +1,33 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Photo Gallery
+      ANPG Search
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
 <ion-content>
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Photo Gallery</ion-title>
+      <ion-title size="large">ANPG Search</ion-title>
     </ion-toolbar>
   </ion-header>
 
+  <!--
   <ion-grid>
     <ion-row>
     <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
@@ -26,4 +41,5 @@
       <ion-icon name="camera"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+  -->
 </ion-content>
