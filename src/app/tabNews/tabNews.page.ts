@@ -27,10 +27,12 @@ export class TabNews {
 
       // App logic to determine if all data is loaded
       // and disable the infinite scroll
+      /*
       if (data.length == 1000) {
         event.target.disabled = true;
       }
-    }, 500);
+      */
+    }, 1000);
   }
 
   toggleInfiniteScroll() {
