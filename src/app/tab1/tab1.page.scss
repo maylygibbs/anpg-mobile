@@ -1,9 +1,9 @@
 ion-content {
-  --background: cadetblue;
+  --background: gray;
 }
 
 ion-content ion-toolbar {
-  --background: cadetblue!important;  
+  --background: gray;  
 }
 
 ion-icon {
@@ -30,25 +30,25 @@ ion-icon {
 .card-button {
   width:120px;
   height:120px;
-  background-color: silver;  
+  background-color: white;  
   left:20%
 
 }
 
 .card-button:hover {
-  background-color: gray;
+  background-color: whitesmoke;
   cursor: zoom-in;
 }
 
 .card-button-interactivo {
   width:80%;
   height:120px;
-  background-color: silver;  
+  background-color: white;  
   left:7%;
 }
 
 .card-button-interactivo:hover {
-  background-color: gray;  
+  background-color: whitesmoke;  
   cursor: zoom-in;
 }
 
