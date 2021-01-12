@@ -11,23 +11,23 @@
     <img  class="responsive" style='position:absolute;width:100%;height:100%;top:0;left:0;' src="assets/img/plataforma.png" alt="" />
   </div>
 
-  <div style="width:100%;height: 100%;">
+  <div style="position:absolute;width:100%;height: 100%;top:40px;">
     <ion-grid>
-      <ion-row>
+      <ion-row class="ion-justify-content-center">
         <ion-col style="text-align: center;">
-          <ion-card class="card-button-top">
-            <ion-icon class="card-button-img" name="map-outline"></ion-icon>
-            <ion-card-header>        
-              <ion-card-title class="card-button-text">Mapa Interativo</ion-card-title>
-            </ion-card-header>
+          <ion-card class="mapa-interativo-button">
+            <ion-item href="#" class="ion-activated">
+              <ion-icon class="card-button-img" name="globe-outline" size="large"></ion-icon>
+              <ion-label class="card-button-text">Mapa Interativo</ion-label>
+            </ion-item>
           </ion-card>      
         </ion-col>
-
       </ion-row>      
-      <ion-row>
+
+      <ion-row class="ion-justify-content-center">
         <ion-col style="text-align: center;">
           <ion-card class="card-button">
-            <ion-icon class="card-button-img" name="add-circle-outline"></ion-icon>
+            <ion-icon class="card-button-img" name="add-circle-outline" size="large"></ion-icon>
             <ion-card-header>        
               <ion-card-title class="card-button-text">Sala de Imprensa</ion-card-title>
             </ion-card-header>
@@ -35,17 +35,17 @@
         </ion-col>
         <ion-col style="text-align: center;">
           <ion-card class="card-button">
-            <ion-icon class="card-button-img" name="map-outline"></ion-icon>
+            <ion-icon class="card-button-img" name="map-outline" size="large"></ion-icon>
             <ion-card-header>        
               <ion-card-title class="card-button-text">Dados E&P</ion-card-title>
             </ion-card-header>
           </ion-card>      
         </ion-col>
       </ion-row>
-      <ion-row>
+      <ion-row class="ion-justify-content-center">
         <ion-col style="text-align: center;">
           <ion-card class="card-button">
-            <ion-icon class="card-button-img" name="map-outline"></ion-icon>
+            <ion-icon class="card-button-img" name="map-outline" size="large"></ion-icon>
             <ion-card-header>        
               <ion-card-title class="card-button-text">Informação Jurídica</ion-card-title>
             </ion-card-header>
@@ -53,7 +53,7 @@
         </ion-col>
         <ion-col style="text-align: center;">
           <ion-card class="card-button">
-            <ion-icon class="card-button-img" name="map-outline"></ion-icon>
+            <ion-icon class="card-button-img" name="map-outline" size="large"></ion-icon>
             <ion-card-header>        
               <ion-card-title class="card-button-text">Licitações</ion-card-title>
             </ion-card-header>
@@ -61,10 +61,10 @@
         </ion-col>
       </ion-row>    
 
-      <ion-row>
+      <ion-row class="ion-justify-content-center">
         <ion-col style="text-align: center;">
           <ion-card class="card-button">
-            <ion-icon class="card-button-img" name="map-outline"></ion-icon>
+            <ion-icon class="card-button-img" name="map-outline" size="large"></ion-icon>
             <ion-card-header>        
               <ion-card-title class="card-button-text">Favoritos</ion-card-title>
             </ion-card-header>
@@ -72,7 +72,7 @@
         </ion-col>
         <ion-col style="text-align: center;">
           <ion-card class="card-button">
-            <ion-icon class="card-button-img" name="map-outline"></ion-icon>
+            <ion-icon class="card-button-img" name="map-outline" size="large"></ion-icon>
             <ion-card-header>        
               <ion-card-title class="card-button-text">Agendamento de Data Room</ion-card-title>
             </ion-card-header>
@@ -80,10 +80,10 @@
         </ion-col>
       </ion-row>      
 
-      <ion-row>
+      <ion-row class="ion-justify-content-center">
         <ion-col style="text-align: center;">
           <ion-card class="card-button">
-            <ion-icon class="card-button-img" name="map-outline"></ion-icon>
+            <ion-icon class="card-button-img" name="map-outline" size="large"></ion-icon>
             <ion-card-header>        
               <ion-card-title class="card-button-text">Glossario</ion-card-title>
             </ion-card-header>
@@ -91,7 +91,7 @@
         </ion-col>
         <ion-col style="text-align: center;">
           <ion-card class="card-button">
-            <ion-icon class="card-button-img" name="map-outline"></ion-icon>
+            <ion-icon class="card-button-img" name="map-outline" size="large"></ion-icon>
             <ion-card-header>        
               <ion-card-title class="card-button-text">FAQ's</ion-card-title>
             </ion-card-header>
@@ -104,20 +104,25 @@
       <div>
         <table style="width:100%;line-height: 24px;">
           <tr>
-            <td>Petroleo Brent</td>
-            <td>Petroleo WTI</td>
-            <td>Gás Natural</td>
-          </tr>
-          <tr>
-            <td>56.73$</td>
-            <td>56.73$</td>
-            <td>2.489$</td>
+            <td rowspan="3">
+              <ion-icon class="card-button-img" name="map-outline" size="large"></ion-icon>
+            </td>            
+            <td>Petroleo Brent
+            <br>56.73$</td>
+            <td rowspan="3">
+              <ion-icon class="card-button-img" name="map-outline" size="large"></ion-icon>
+            </td>
+            <td>Petroleo WTI
+            <br>56.73$</td>
+            <td rowspan="3">
+              <ion-icon class="card-button-img" name="map-outline" size="large"></ion-icon>
+            </td>
+            <td>Gás Natural
+            <br>2.489$</td>
           </tr>
         </table>
       </div>
     </ion-card>
-
   </div>
-  <!--<app-explore-container name="Tab 1 page"></app-explore-container>-->
   <!--<img id="Group_1765" src="assets/img/plataforma.png">-->
 </ion-content>
