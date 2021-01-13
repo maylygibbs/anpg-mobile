@@ -78,6 +78,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'interactive-map',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-interactive-map/tab-interactive-map.module').then(m => m.TabInteractiveMapModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tabSplash',
         pathMatch: 'full'
