@@ -1,27 +1,48 @@
 ion-content {
-    --background: gray url('../assets/img/plataforma2x.png') no-repeat center center / cover;
+  --background: gray url("../assets/img/plataforma2x.png") no-repeat center
+    center / cover;
 }
 #charge {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120px;
-    height: 120px;
-    margin:-60px 0 0 -60px;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -60px 0 0 -60px;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
   }
-  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-  
-.fundoApp {
-    background-image: url("/assets/img/plataforma.png");
-    background-color: #000;
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
   }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
-  .center-content {
-    width: 50%;
-    margin: 0 auto;
-  }  
+.fundoApp {
+  background-image: url("/assets/img/plataforma.png");
+  background-color: #000;
+}
+
+.center-content {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.logoSplash {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
