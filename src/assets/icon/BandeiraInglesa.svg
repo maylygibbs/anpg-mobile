@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.304" height="8.87" viewBox="0 0 13.304 8.87">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1569" data-name="Rectangle 1569" width="13.304" height="8.87" transform="translate(677.839 2653.708)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_1567" data-name="Rectangle 1567" width="17.701" height="8.851" transform="translate(675.646 2653.708)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Path_3035" data-name="Path 3035" d="M675.646,2653.708v4.425H696.3v4.425h-2.951Zm17.7,0H684.5v10.325h-8.851v-1.475Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect id="Rectangle_1568" data-name="Rectangle 1568" width="17.701" height="8.851" transform="translate(675.641 2653.705)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1849" data-name="Group 1849" transform="translate(-677.839 -2653.708)">
+    <g id="Group_1848" data-name="Group 1848" clip-path="url(#clip-path)">
+      <g id="Group_1847" data-name="Group 1847">
+        <path id="Path_3032" data-name="Path 3032" d="M675.646,2653.708v8.846h17.692v-8.846Z" fill="#0d2764"/>
+        <g id="Group_1846" data-name="Group 1846">
+          <g id="Group_1841" data-name="Group 1841">
+            <g id="Group_1840" data-name="Group 1840" clip-path="url(#clip-path-2)">
+              <path id="Path_3033" data-name="Path 3033" d="M675.646,2653.708l17.7,8.85m0-8.85-17.7,8.85" fill="#040505" stroke="#fff" stroke-width="1.474"/>
+            </g>
+          </g>
+          <g id="Group_1845" data-name="Group 1845">
+            <g id="Group_1844" data-name="Group 1844" clip-path="url(#clip-path-3)">
+              <g id="Group_1843" data-name="Group 1843">
+                <g id="Group_1842" data-name="Group 1842" clip-path="url(#clip-path-4)">
+                  <path id="Path_3034" data-name="Path 3034" d="M675.646,2653.708l17.7,8.85m0-8.85-17.7,8.85" fill="#040505" stroke="#c20320" stroke-width="0.885"/>
+                </g>
+              </g>
+            </g>
+          </g>
+          <path id="Path_3036" data-name="Path 3036" d="M684.5,2653.708v8.85m-8.851-4.425h17.7" fill="#040505" stroke="#fff" stroke-width="2.949"/>
+          <path id="Path_3037" data-name="Path 3037" d="M684.5,2653.708v8.85m-8.851-4.425h17.7" fill="#040505" stroke="#c20320" stroke-width="1.769"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
