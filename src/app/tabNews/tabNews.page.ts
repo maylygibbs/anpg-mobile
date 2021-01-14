@@ -7,35 +7,85 @@ import { IonInfiniteScroll } from '@ionic/angular';
   styleUrls: ['tabNews.page.scss']
 })
 export class TabNews {
-  @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
-  
-  constructor() {}
+  items: any = [];
+  itemHeight: number = 0;
 
-  doRefresh(event) {
-    console.log('Begin async operation');
-
-    setTimeout(() => {
-      console.log('Async operation has ended');
-      event.target.complete();
-    }, 2000);
+  constructor() {
+    this.items = [
+      {
+        expanded: false,
+        title: 'NEWS TITLE 1',
+        img: 'assets/img/noticia_1.png',
+        sector: 'INOVACAO',
+        text: 'NEWS TEXT',        
+      },
+      {
+        expanded: false,
+        title: 'NEWS TITLE 2',
+        img: 'assets/img/noticia_2.png',
+        sector: 'REGULACAO',
+        text: 'NEWS TEXT',        
+      },
+      {
+        expanded: false,
+        title: 'NEWS TITLE 3',
+        img: 'assets/img/noticia_3.png"',
+        sector: 'CAPITAL HUMANO',
+        text: 'NEWS TEXT',        
+      },
+      {
+        expanded: false,
+        title: 'NEWS TITLE 4',
+        img: 'assets/img/noticia_4.png',
+        sector: 'OPERAÇÔES',
+        text: 'NEWS TEXT',        
+      },
+      {
+        expanded: false,
+        title: 'NEWS TITLE 5',
+        img: 'assets/img/noticia_5.png',
+        sector: 'INOVACAO',
+        text: 'NEWS TEXT',        
+      },
+      {
+        expanded: false,
+        title: 'NEWS TITLE 6',
+        img: 'assets/img/noticia_1.png',
+        sector: 'INOVACAO',
+        text: 'NEWS TEXT',        
+      },
+      {
+        expanded: false,
+        title: 'NEWS TITLE 7',
+        img: 'assets/img/noticia_2.png',
+        sector: 'INOVACAO',
+        text: 'NEWS TEXT',        
+      },
+      {
+        expanded: false,
+        title: 'NEWS TITLE 8',
+        img: 'assets/img/noticia_3.png',
+        sector: 'INOVACAO',
+        text: 'NEWS TEXT',        
+      },
+      {
+        expanded: false,
+        title: 'NEWS TITLE 9',
+        img: 'assets/img/noticia_4.png',
+        sector: 'INOVACAO',
+        text: 'NEWS TEXT',        
+      },
+  ];
   }
 
-  loadData(event) {
-    setTimeout(() => {
-      console.log('Done');
-      event.target.complete();
-
-      // App logic to determine if all data is loaded
-      // and disable the infinite scroll
-      /*
-      if (data.length == 1000) {
-        event.target.disabled = true;
-      }
-      */
-    }, 1000);
+  expandItem(item){ 
+    this.items.map((listItem) => {
+        if(item == listItem){
+            listItem.expanded = !listItem.expanded;
+        } else {
+            listItem.expanded = false;
+        }
+        return listItem;
+    });
   }
-
-  toggleInfiniteScroll() {
-    this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
-  }  
 }
