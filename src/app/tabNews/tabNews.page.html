@@ -26,11 +26,9 @@
             <img [src]='item.img'>            
             <ion-card-title>{{ item.sector }}</ion-card-title>
           </ion-card-header>      
-          <app-expandable [height]="heightHeight" [expanded]="item.expanded">
-            <ion-card-content>
+          <ion-card-content>
               {{ item.text }}
-            </ion-card-content>
-          </app-expandable>
+          </ion-card-content>          
         </ion-card>
       </button>
     </ion-list>

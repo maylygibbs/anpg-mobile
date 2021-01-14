@@ -14,18 +14,15 @@
   </div>
 
   <div style="padding: 10px;">
-
     <ion-list>
       <button (click)="expandItem(item)" ion-item *ngFor="let item of items">
-        <ion-card style="width:500px">
+        <ion-card style="width:400px">
           <ion-card-header>
             <ion-card-title>{{ item.question }}</ion-card-title>
           </ion-card-header>      
-          <app-expandable [height]="heightHeight" [expanded]="item.expanded">
-            <ion-card-content>
+          <ion-card-content>
               {{ item.answer }}
-            </ion-card-content>
-          </app-expandable>
+          </ion-card-content>
         </ion-card>
       </button>
     </ion-list>
