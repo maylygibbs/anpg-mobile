@@ -28,7 +28,7 @@
         <ion-col size="6">
           <ion-card routerLink="/tabs/sala-de-imprensa/" class="card-button-left">
             <ion-row class="ion-align-self-center"> 
-              <ion-item lines="none" class="center-image card-button-int">
+              <ion-item lines="none" class="center-image card-button-int" >
                 <img src="assets/icon/SalaImprensa.svg">
               </ion-item>
             </ion-row>
@@ -43,7 +43,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card routerLink="/tabs/tabNews" class="card-button-right">
+          <ion-card routerLink="/tabs/dados-eap" class="card-button-right">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/DadosEP.svg">
@@ -63,7 +63,7 @@
       <ion-row class="ion-align-self-center">
         
         <ion-col size="6">
-          <ion-card routerLink="/tabs/tabNews" class="card-button-left">
+          <ion-card routerLink="/tabs/informacao-juridica" class="card-button-left">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/InformacaoJuridica.svg">
@@ -80,7 +80,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card routerLink="/tabs/tabNews" class="card-button-right">
+          <ion-card routerLink="/tabs/licitacoes" class="card-button-right">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/Licitacoes.svg">
@@ -100,7 +100,7 @@
       <ion-row class="ion-align-self-center">
         
         <ion-col size="6">
-          <ion-card routerLink="/tabs/tabNews" class="card-button-left">
+          <ion-card routerLink="/tabs/favoritos" class="card-button-left">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/Favoritos.svg">
@@ -117,7 +117,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card routerLink="/tabs/tabNews" class="card-button-right">
+          <ion-card routerLink="/tabs/agendamento" class="card-button-right">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/AgendamentoVDR.svg">
@@ -137,7 +137,7 @@
       <ion-row class="ion-align-self-center">
         
         <ion-col size="6">
-          <ion-card routerLink="/tabs/tabNews" class="card-button-left">
+          <ion-card routerLink="/tabs/glossario" class="card-button-left">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/Glossario.svg">
@@ -154,7 +154,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card routerLink="/tabs/tabNews" class="card-button-right">
+          <ion-card routerLink="/tabs/faq" class="card-button-right">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/Faqs.svg">
@@ -178,20 +178,20 @@
               <table style="width:100%;line-height: 24px;">
                 <tr>
                   <td rowspan="3">
-                    <img src="assets/icon/TickerBrent.svg">
+                    <img src="assets/icon/TickerBrent.svg" class="bottom-card-button-img">
                   </td>            
-                  <td>Petroleo Brent
-                  <br>56.73$</td>
+                  <td class="card-button-text"><p style="line-height: 15px;">Petroleo Brent
+                  <br>56.73$</p></td>
                   <td rowspan="3">
-                    <img src="assets/icon/TickerWITI.svg">
+                    <img src="assets/icon/TickerWITI.svg" class="bottom-card-button-img">
                   </td>
-                  <td>Petroleo WTI
-                  <br>56.73$</td>
+                  <td class="card-button-text"><p style="line-height: 15px;">Petroleo WTI
+                  <br>56.73$</p></td>
                   <td rowspan="3">
-                    <img src="assets/icon/TickerGas.svg">
+                    <img src="assets/icon/TickerGas.svg" class="bottom-card-button-img">
                   </td>
-                  <td>Gás Natural
-                  <br>2.489$</td>
+                  <td class="card-button-text"><p style="line-height: 15px;">Gás Natural
+                  <br/>2.489$</p></td>
                 </tr>
               </table>
             </div>
@@ -201,29 +201,5 @@
 
     </ion-grid>
 
-   
-    <ion-card style="background-color: whitesmoke; color:#000;">
-      <div>
-        <table style="width:100%;line-height: 24px;">
-          <tr>
-            <td rowspan="3">
-              <img src="assets/icon/TickerBrent.svg" style="width: 48px;">
-            </td>            
-            <td>Petroleo Brent
-            <br>56.73$</td>
-            <td rowspan="3">
-              <img src="assets/icon/TickerWITI.svg" style="width: 48px;">
-            </td>
-            <td>Petroleo WTI
-            <br>56.73$</td>
-            <td rowspan="3">
-              <img src="assets/icon/TickerGas.svg" style="width: 48px;">
-            </td>
-            <td>Gás Natural
-            <br>2.489$</td>
-          </tr>
-        </table>
-      </div>
-    </ion-card>
 
 </ion-content>
