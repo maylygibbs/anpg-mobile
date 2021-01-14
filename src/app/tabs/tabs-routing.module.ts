@@ -88,6 +88,17 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'sala-de-imprensa',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-sala-de-imprensa/tab-sala-de-imprensa.module').then(m => m.TabSalaDeImprensaModule)
+          }
+        ]
+      },
+
+      {
         path: '',
         redirectTo: '/tabs/tabSplash',
         pathMatch: 'full'

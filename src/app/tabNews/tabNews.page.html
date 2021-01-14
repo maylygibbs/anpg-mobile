@@ -1,41 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      << Sala de Imprensa | Notícias
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>      
+      <img src="assets/icon/LogoSpashScreen.svg"> <span style="position:absolute;padding:35px;vertical-align: middle;font-weight: 800;font-family: Verdana, Geneva, Tahoma, sans-serif;">Notícias</span>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+  <div>
+    <img src="assets/img/noticia_5_2x.png" style="width: 100%;">
+    <div style="height:28px;background-color: darkred;color:white;padding-top: -3px;">
+      <div style="padding-left: 10px;padding-top: 5px;">
+      <b>INOVAÇÃO </b> <span style="color:yellow">| REGULAÇÃO | CAPITAL HUMANO</span>
+      </div>
+    </div>
+  </div>
 
-<!-- Custom Refresher Content -->
-<ion-content>
-  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content
-      pullingIcon="chevron-down-circle-outline"
-      pullingText="Pull to refresh"
-      refreshingSpinner="circles"
-      refreshingText="Refreshing...">
-    </ion-refresher-content>
-  </ion-refresher>
-</ion-content>
+  <div>
+    <div>INOVACAO</div>
+    <div>Apresentação em ....</div>
+  </div>
 
-<ion-content>
-  <ion-button (click)="toggleInfiniteScroll()" expand="block">
-    ...
-  </ion-button>
+  <div>
+    <div>REGULACAO</div>
+    <div>A Agência Nacional..</div>
+  </div>
 
-  <ion-list></ion-list>
+  <div>
+    <div>CAPITAL HUMANO</div>
+    <div>Bloco 3 ....</div>
+  </div>
 
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-    <ion-infinite-scroll-content
-      loadingSpinner="bubbles"
-      loadingText="Loading more data...">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
+  <div>
+    <div>OPERAÇÕES</div>
+    <div>Apresentação em ....</div>
+  </div>
+
+
 </ion-content>
 
