@@ -19,26 +19,20 @@
     </div>
   </div>
 
-  <div>
-    <div>INOVACAO</div>
-    <div>Apresentação em ....</div>
-  </div>
-
-  <div>
-    <div>REGULACAO</div>
-    <div>A Agência Nacional..</div>
-  </div>
-
-  <div>
-    <div>CAPITAL HUMANO</div>
-    <div>Bloco 3 ....</div>
-  </div>
-
-  <div>
-    <div>OPERAÇÕES</div>
-    <div>Apresentação em ....</div>
-  </div>
-
-
+    <ion-list>
+      <button (click)="expandItem(item)" ion-item *ngFor="let item of items">
+        <ion-card style="width:500px">
+          <ion-card-header>
+            <img [src]='item.img'>            
+            <ion-card-title>{{ item.sector }}</ion-card-title>
+          </ion-card-header>      
+          <app-expandable [height]="heightHeight" [expanded]="item.expanded">
+            <ion-card-content>
+              {{ item.text }}
+            </ion-card-content>
+          </app-expandable>
+        </ion-card>
+      </button>
+    </ion-list>
 </ion-content>
 

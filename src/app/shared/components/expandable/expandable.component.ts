@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Input, ViewChild,  ElementRef, Renderer2 } from "@angular/core";
+import { Component, AfterViewInit, Input, ViewChild,  ElementRef, Renderer2, HostListener } from "@angular/core";
 
 @Component({
   selector: 'app-expandable',
@@ -7,13 +7,24 @@ import { Component, AfterViewInit, Input, ViewChild,  ElementRef, Renderer2 } fr
 })
 export class ExpandableComponent implements AfterViewInit  {
 
-  @ViewChild("expandWrapper", { read: ElementRef }) expandWrapper: ElementRef;
-  @Input("expanded") expanded: boolean = false;
-  @Input("expandHeight") expandHeight: string = "150px";
+  @ViewChild("wrapper", { read: ElementRef }) wrapper: ElementRef;
+  @Input("expanded") expanded;
+  @Input("height") height;
+/*
+  @HostListener('focus') onFocus() {
+    this.renderer.setStyle(this.wrapper.nativeElement, 'height', this.height + 'px');
+  }*/
+
 
   constructor(public renderer: Renderer2) {}
 
-  ngAfterViewInit() {
-    this.renderer.setStyle(this.expandWrapper.nativeElement, "max-height", this.expandHeight);
+  ngAfterViewInit(){
+    if(this.height){
+      this.wrapper.nativeElement.setElementStyle(this.wrapper.nativeElement, 'height', this.height + 'px');
+      /*
+      this.renderer.setElementStyle(this.wrapper.nativeElement, 'height', this.height + 'px');    
+      */
+    }
   }
+
 }

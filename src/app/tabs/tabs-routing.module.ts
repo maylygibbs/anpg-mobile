@@ -68,7 +68,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tabNews',
+        path: 'news',
         children: [
           {
             path: '',

@@ -15,36 +15,21 @@
 
   <div style="padding: 10px;">
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>FAQ's</ion-card-title>
-      </ion-card-header>  
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Question 1</ion-card-title>
-      </ion-card-header>
-  
-      <ion-card-content>
-        Awswer
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Question 1</ion-card-title>
-      </ion-card-header>
-  
-      <ion-card-content>
-        Awswer
-      </ion-card-content>
-    </ion-card>
+    <ion-list>
+      <button (click)="expandItem(item)" ion-item *ngFor="let item of items">
+        <ion-card style="width:500px">
+          <ion-card-header>
+            <ion-card-title>{{ item.question }}</ion-card-title>
+          </ion-card-header>      
+          <app-expandable [height]="heightHeight" [expanded]="item.expanded">
+            <ion-card-content>
+              {{ item.answer }}
+            </ion-card-content>
+          </app-expandable>
+        </ion-card>
+      </button>
+    </ion-list>
 
   </div>
-
-
-
-  
 
 </ion-content>
