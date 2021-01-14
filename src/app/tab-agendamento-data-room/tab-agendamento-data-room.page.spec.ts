@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { TabNews } from './tabNews.page';
+import { TabAgendamentoDataRoom } from './tab-agendamento-data-room.page';
 
-describe('TabNews', () => {
-  let component: TabNews;
-  let fixture: ComponentFixture<TabNews>;
+describe('TabAgendamentoDataRoom', () => {
+  let component: TabAgendamentoDataRoom;
+  let fixture: ComponentFixture<TabAgendamentoDataRoom>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TabNews],
+      declarations: [TabAgendamentoDataRoom],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TabNews);
+    fixture = TestBed.createComponent(TabAgendamentoDataRoom);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

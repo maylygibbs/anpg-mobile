@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>      
+      <img src="assets/icon/LogoSpashScreen.svg"> <span style="position:absolute;padding:35px;vertical-align: middle;font-weight: 800;font-family: Verdana, Geneva, Tahoma, sans-serif;">FAQ</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="background-color: transparent;height:20px;">
+  </div>
+
+  <div style="padding: 10px;">
+    <ion-list>
+      <button (click)="expandItem(item)" ion-item *ngFor="let item of items">
+        <ion-card style="width:400px">
+          <ion-card-header>
+            <ion-card-title>{{ item.question }}</ion-card-title>
+          </ion-card-header>      
+          <ion-card-content>
+              {{ item.answer }}
+          </ion-card-content>
+        </ion-card>
+      </button>
+    </ion-list>
+
+  </div>
+
+</ion-content>

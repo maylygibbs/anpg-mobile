@@ -68,7 +68,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tabNews',
+        path: 'news',
         children: [
           {
             path: '',
@@ -97,7 +97,76 @@ const routes: Routes = [
           }
         ]
       },
-
+      {
+        path: 'faq',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-faq/tab-faq.module').then(m => m.TabFaqModule)
+          }
+        ]
+      },
+      {
+        path: 'agendamento',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-agendamento-data-room/tab-agendamento-data-room.module').then(m => m.TabAgendamentoDataRoomModule)
+          }
+        ]
+      },
+      {
+        path: 'dados-eap',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-dados-eap/tab-dados-eap.module').then(m => m.TabDadosEapModule)
+          }
+        ]
+      },
+      {
+        path: 'favoritos',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-favoritos/tab-favoritos.module').then(m => m.TabFavoritosModule)
+          }
+        ]
+      },
+      {
+        path: 'glossario',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-glossario/tab-glossario.module').then(m => m.TabGlossarioModule)
+          }
+        ]
+      },
+      {
+        path: 'informacao-juridica',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-informacao-juridica/tab-informacao-juridica.module').then(m => m.TabInformacaoJuridicaModule)
+          }
+        ]
+      },
+      {
+        path: 'licitacoes',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-licitacoes/tab-licitacoes.module').then(m => m.TabLicitacoesModule)
+          }
+        ]
+      },
       {
         path: '',
         redirectTo: '/tabs/tabSplash',
