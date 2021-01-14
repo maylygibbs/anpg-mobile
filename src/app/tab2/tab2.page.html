@@ -1,19 +1,22 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>
-      App ANPG >> Search
+      <img src="assets/icon/LogoSpashScreen.svg"> <span style="position:absolute;padding:35px;vertical-align: middle;font-weight: 800;font-family: Verdana, Geneva, Tahoma, sans-serif;">Search</span>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+    <ion-searchbar style="color:white;" (input)="getItems($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list style="color:white;">
     <ion-item *ngFor="let item of items">
       {{ item }}
     </ion-item>
