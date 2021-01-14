@@ -6,78 +6,202 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content style="top:0;">
-  
-  <div style="position:absolute;width:100%;height: 100%;top:0px;">
-    <div class="row" style="padding-top: 30px;">
-      <a routerLink="/tabs/tab3" style="text-decoration: none;">
-        <div class="center-content" style="border-radius: 6px;background-color: white;">
-          <div style="width:100%;height:34px;vertical-align: middle;padding-top: 5px;padding-left: 10px;">
-            <span>
-            <img src="assets/icon/MapaInterativo.svg">
-            <span style="padding-left: 10px;">
-            Mapa Interactivo
-          </span>
-            </span>
-          </div>
-        </div>
-      </a>
-    </div>
+<ion-content>
+    <ion-grid>
+      <ion-row > 
+        <ion-col>
+          <ion-card class="card-button-top"> 
+            <ion-item lines="none" routerLink="/tabs/tab3">
+             <!--  <ion-thumbnail slot="start"> -->
+                <img src="assets/icon/MapaInterativo.svg" class="card-button-interactivo-img"> 
+              <!-- </ion-thumbnail> -->
+              <ion-label class="card-button-text">
+                Mapa Interactivo
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+      
+      <ion-row class="ion-align-self-center">
+        
+        <ion-col size="6">
+          <ion-card routerLink="/tabs/sala-de-imprensa/" class="card-button-left">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/SalaImprensa.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Sala Imprensa
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+        
+        <ion-col size="6"> 
+          <ion-card routerLink="/tabs/tabNews" class="card-button-right">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/DadosEP.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Dados E&P
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+      </ion-row>
 
-    <div class="row" style="padding-top: 10px;">
-      <div class="column">
-        <a routerLink="/tabs/sala-de-imprensa/" style="text-decoration: none;">
-          <div class="card">
-              <img src="assets/icon/SalaImprensa.svg" style="width: 60px;">
-              <ion-card-title class="card-button-text">Sala de Imprensa</ion-card-title>
-          </div>
-        </a>
-      </div>
-      <div class="column">
-        <div class="card">
-            <img src="assets/icon/DadosEP.svg" style="width: 60px;">
-            <ion-card-title class="card-button-text">Dados E&P</ion-card-title>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-            <img src="assets/icon/InformacaoJuridica.svg" style="width: 60px;">
-            <ion-card-title class="card-button-text">Informação Jurídica</ion-card-title>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-            <img src="assets/icon/Licitacoes.svg" style="width: 60px;">
-            <ion-card-title class="card-button-text">Licitações</ion-card-title>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-            <img src="assets/icon/Favoritos.svg" style="width: 60px;">
-            <ion-card-title class="card-button-text">Favoritos</ion-card-title>
-        </div>
-      </div>
+      <ion-row class="ion-align-self-center">
+        
+        <ion-col size="6">
+          <ion-card routerLink="/tabs/tabNews" class="card-button-left">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/InformacaoJuridica.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Informação Jurídica
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+        
+        <ion-col size="6"> 
+          <ion-card routerLink="/tabs/tabNews" class="card-button-right">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/Licitacoes.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none"class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Licitações
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+      </ion-row>
 
-      <div class="column">
-        <div class="card">
-            <img src="assets/icon/AgendamentoVDR.svg" style="width: 60px;">
-            <ion-card-title class="card-button-text">Agendamento de Data Room</ion-card-title>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-            <img src="assets/icon/Glossario.svg" style="width: 60px;">
-            <ion-card-title class="card-button-text">Glossario</ion-card-title>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-            <img src="assets/icon/Faqs.svg" style="width: 60px;">
-            <ion-card-title class="card-button-text">FAQ's</ion-card-title>
-        </div>
-      </div>
-    </div>
+      <ion-row class="ion-align-self-center">
+        
+        <ion-col size="6">
+          <ion-card routerLink="/tabs/tabNews" class="card-button-left">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/Favoritos.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Favoritos
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+        
+        <ion-col size="6"> 
+          <ion-card routerLink="/tabs/tabNews" class="card-button-right">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/AgendamentoVDR.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text ion-text-wrap" style="margin-top: 0px">
+                  Agendamento de Data Room
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+      </ion-row>
 
+      <ion-row class="ion-align-self-center">
+        
+        <ion-col size="6">
+          <ion-card routerLink="/tabs/tabNews" class="card-button-left">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/Glossario.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Glossario
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+        
+        <ion-col size="6"> 
+          <ion-card routerLink="/tabs/tabNews" class="card-button-right">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/Faqs.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  FAQ's
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-align-self-center">
+        <ion-col>
+          <ion-card style="background-color: whitesmoke; color:#000;" class="card-button">
+          <div>
+              <table style="width:100%;line-height: 24px;">
+                <tr>
+                  <td rowspan="3">
+                    <img src="assets/icon/TickerBrent.svg">
+                  </td>            
+                  <td>Petroleo Brent
+                  <br>56.73$</td>
+                  <td rowspan="3">
+                    <img src="assets/icon/TickerWITI.svg">
+                  </td>
+                  <td>Petroleo WTI
+                  <br>56.73$</td>
+                  <td rowspan="3">
+                    <img src="assets/icon/TickerGas.svg">
+                  </td>
+                  <td>Gás Natural
+                  <br>2.489$</td>
+                </tr>
+              </table>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+   
     <ion-card style="background-color: whitesmoke; color:#000;">
       <div>
         <table style="width:100%;line-height: 24px;">
@@ -102,9 +226,4 @@
       </div>
     </ion-card>
 
-    <div style="background-color: transparent;height:20px;">
-    </div>
-
-  </div>
-  <!--<img id="Group_1765" src="assets/img/plataforma.png">-->
 </ion-content>
