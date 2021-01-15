@@ -64,11 +64,18 @@ ion-content ion-toolbar {
 
 .card-button-text {
   font-family: FranklinGothic-Medium;
-  color: white;
 }
 
 .bottom-card-button-img {
   width: 30px;
   padding-left: 2px;
-  padding-right: 5px;
+  padding-right: 5px;;
 }
+ion-card,
+ion-item {
+  --background: white;
+}
+
+
+
+
