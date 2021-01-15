@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="" (click)="goBack()"></ion-back-button>
     </ion-buttons>
     <ion-title>      
       <img src="assets/icon/LogoSpashScreen.svg"> <span style="position:absolute;padding:35px;vertical-align: middle;font-weight: 800;font-family: Verdana, Geneva, Tahoma, sans-serif;">Sala de Imprensa</span>
@@ -14,8 +14,8 @@
   </div>
 
   <div style="padding: 10px;">
-    <a routerLink="/tabs/news">
-      <div class="row" style="border-radius: 6px;background-color: white;height:60px;">
+    <a (click)="goToNoticias()">
+      <div class="row" style="border-radius: 6px;background-color: white;height:60px;cursor: pointer;">
         <div>
           <img src="assets/icon/Noticias.svg" style="padding-top:10px;width: 48px;">                
             Noticias        
