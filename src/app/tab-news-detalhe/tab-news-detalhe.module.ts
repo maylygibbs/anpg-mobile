@@ -3,17 +3,15 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { TabNews } from './tabNews.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
+import { TabNewsDetalhe } from './tab-news-detalhe.page';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
-    RouterModule.forChild([{ path: '', component: TabNews }])
+    RouterModule.forChild([{ path: '', component: TabNewsDetalhe }])
   ],
-  declarations: [TabNews]
+  declarations: [TabNewsDetalhe]
 })
-export class TabNewsModule {}
+export class TabNewsDetalheModule {}

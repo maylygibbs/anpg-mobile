@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/sala-de-imprensa/"></ion-back-button>
+      <ion-back-button defaultHref="" (click)="goBack()"></ion-back-button>
     </ion-buttons>
     <ion-title>      
       <img src="assets/icon/LogoSpashScreen.svg"> <span style="position:absolute;padding:35px;vertical-align: middle;font-weight: 800;font-family: Verdana, Geneva, Tahoma, sans-serif;">Notícias</span>
@@ -20,17 +20,17 @@
   </div>
   <div>
     <ng-container *ngFor='let item of noticias$ | async'>
-        <div style="padding:10px;cursor: pointer;">
+        <div style="padding:10px;cursor: pointer;" (click)="detalhe(item)">
           <table>
-            <a (click)="detalhe(item)">
+            
               <tr>
                 <td rowspan="2" style="max-width: 30%;"><img [src]="item.img" style="max-width:80px;"></td>
                 <td rowspan="2" style="padding-left:10px;text-align: left;vertical-align: top;">
                   <b>{{ item.title }}</b><br>
-                  {{ item.text.substring(1,150) }}
+                  <div [innerHTML]="item.text.substring(0,150)"></div>
                 </td>              
               </tr>
-            </a>
+            
           </table>
         </div>        
     </ng-container>
