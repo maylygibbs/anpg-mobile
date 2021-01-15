@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content>
-  <div style="background-color: transparent;height:20px;">
+ <!--  <div style="background-color: transparent;height:20px;">
   </div>
 
   <div style="padding: 10px;">
@@ -27,6 +27,19 @@
       </button>
     </ion-list>
 
-  </div>
+  </div> -->
+
+ <!--  <app-mi-accordion 
+     *ngFor="let technology of technologies" 
+     name="{{ technology.name }}" 
+     description="{{ technology.description }}" 
+     image="{{ technology.image }}" 
+     (change)="captureName($event)"> </app-mi-accordion>
+ -->
+  <app-mi-accordion 
+     *ngFor="let faq of faqs" 
+     name="{{ faq.title }}" 
+     description="{{ faq.answer }}" 
+    > </app-mi-accordion>
 
 </ion-content>

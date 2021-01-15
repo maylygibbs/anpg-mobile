@@ -1,17 +1,20 @@
 ion-content {
-  --background: darkred url('../../assets/img/angola2x.png') no-repeat center center / cover;
+  --background: #86888fbd url("../../assets/img/angola2x.png") no-repeat right
+    top;
 }
 ion-content ion-toolbar {
   --background: translucent;
 }
 
 .column {
-  float: left;  
+  float: left;
   padding: 0 5px 5px 5px;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;}
+.row {
+  margin: 0 -5px;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -32,7 +35,7 @@ ion-content ion-toolbar {
 .center-content {
   width: 50%;
   margin: 0 auto;
-}  
+}
 
 .vertical-line {
   border-left: 6px solid gray;
