@@ -15,8 +15,8 @@
   </div>
   <div>
       <div style="padding:10px;">
-        <h5>{{ this.noticia$.title }}></h5>        
-        {{ this.noticia$.text }}
+        <h5>{{ this.noticia$.title }}</h5>     
+        <div [innerHTML]="this.noticia$.text"></div>
       </div>
   </div>
 </ion-content>

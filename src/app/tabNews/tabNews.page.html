@@ -27,7 +27,7 @@
                 <td rowspan="2" style="max-width: 30%;"><img [src]="item.img" style="max-width:80px;"></td>
                 <td rowspan="2" style="padding-left:10px;text-align: left;vertical-align: top;">
                   <b>{{ item.title }}</b><br>
-                  {{ item.text.substring(1,150) }}
+                  <div [innerHTML]="item.text.substring(0,150)"></div>
                 </td>              
               </tr>
             
