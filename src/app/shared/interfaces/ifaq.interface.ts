@@ -1,6 +1,5 @@
 export interface IFaq {
-    expanded: boolean,
-    question: string,
+    title: string,
     answer: string,
 
 }
