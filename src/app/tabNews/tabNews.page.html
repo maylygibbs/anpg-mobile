@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button defaultHref="/tabs/sala-de-imprensa/"></ion-back-button>
     </ion-buttons>
     <ion-title>      
       <img src="assets/icon/LogoSpashScreen.svg"> <span style="position:absolute;padding:35px;vertical-align: middle;font-weight: 800;font-family: Verdana, Geneva, Tahoma, sans-serif;">Notícias</span>
@@ -18,19 +18,21 @@
       </div>
     </div>
   </div>
-
-    <ion-list>
-      <button (click)="expandItem(item)" ion-item *ngFor="let item of items">
-        <ion-card style="width:500px">
-          <ion-card-header>
-            <img [src]='item.img'>            
-            <ion-card-title>{{ item.sector }}</ion-card-title>
-          </ion-card-header>      
-          <ion-card-content>
-              {{ item.text }}
-          </ion-card-content>          
-        </ion-card>
-      </button>
-    </ion-list>
+  <div>
+    <ng-container *ngFor='let item of noticias$ | async'>
+        <div style="padding:10px;cursor: pointer;">
+          <table>
+            <a (click)="detalhe(item)">
+              <tr>
+                <td rowspan="2" style="max-width: 30%;"><img [src]="item.img" style="max-width:80px;"></td>
+                <td rowspan="2" style="padding-left:10px;text-align: left;vertical-align: top;">
+                  <b>{{ item.title }}</b><br>
+                  {{ item.text.substring(1,150) }}
+                </td>              
+              </tr>
+            </a>
+          </table>
+        </div>        
+    </ng-container>
+  </div>
 </ion-content>
-

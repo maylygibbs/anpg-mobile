@@ -5,21 +5,22 @@ import { INews } from '../shared/interfaces/inews.interface';
 import { NewsService } from '../shared/services/news.service';
 
 @Component({
-  selector: 'app-news',
-  templateUrl: 'tabNews.page.html',
-  styleUrls: ['tabNews.page.scss'],
+  selector: 'app-news-detalhe',
+  templateUrl: 'tab-news-detalhe.page.html',
+  styleUrls: ['tab-news-detalhe.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TabNews {
+export class TabNewsDetalhe {
   
-  noticias$: Observable<INews[]>;
+  noticia$: INews;
   
   constructor(private newsService: NewsService) {
-    this.noticias$ = this.newsService.getAllNews();
+    //this.noticia$ = this.newsService.getAllNews();
   }
 
   detalhe(item: INews): void {
     //navegar para 
+    this.noticia$  = item;
     console.log(item);
   }
 
