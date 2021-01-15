@@ -1,17 +1,19 @@
 ion-content {
-  --background: gray url('../../assets/img/angola2x.png') no-repeat center center / cover;
+  --background: #6e0010 url("../../assets/img/angola2x.png") no-repeat right top;
 }
 ion-content ion-toolbar {
   --background: translucent;
 }
 
 .column {
-  float: left;  
+  float: left;
   padding: 0 5px 5px 5px;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;}
+.row {
+  margin: 0 -5px;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -32,7 +34,7 @@ ion-content ion-toolbar {
 .center-content {
   width: 50%;
   margin: 0 auto;
-}  
+}
 
 .vertical-line {
   border-left: 6px solid gray;
@@ -43,13 +45,13 @@ ion-content ion-toolbar {
   top: 0;
 }
 
-.card-button-img{
+.card-button-img {
   border-right: 2px solid gray;
   margin-right: 10px;
   padding-right: 10px;
 }
 
-.card-button{
+.card-button {
   margin-left: 0px;
   margin-right: 10%;
   padding: 0px;
@@ -57,11 +59,11 @@ ion-content ion-toolbar {
   height: 55px;
   padding-top: 5px;
   margin-bottom: 0px;
-  margin-top: 0px;  
+  margin-top: 0px;
 }
 
 .card-button-text {
-  font-family: FranklinGothic-Medium;												 
+  font-family: FranklinGothic-Medium;
 }
 
 .bottom-card-button-img {
@@ -73,3 +75,7 @@ ion-card,
 ion-item {
   --background: white;
 }
+
+
+
+
