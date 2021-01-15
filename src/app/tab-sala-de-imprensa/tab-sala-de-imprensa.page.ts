@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { RouteStateService } from '../shared/services/route-state.service';
 
 @Component({
   selector: 'app-tab-sala-de-imprensa',
@@ -7,6 +8,13 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class TabSalaDeImprensa {
     
-  constructor() {}
+  constructor(private routeStateService: RouteStateService) {}
 
+  goBack(): void {
+    this.routeStateService.loadPrevious();
+  }
+
+  goToNoticias(): void {
+    this.routeStateService.add("Sala de Imprensa", "/tabs/news/", null, false);    
+  }
 }

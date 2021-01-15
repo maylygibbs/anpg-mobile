@@ -1,5 +1,5 @@
 ion-content {
-  --background: darkred url('../../assets/img/angola2x.png') no-repeat center center / cover;
+  --background: gray url('../../assets/img/angola2x.png') no-repeat center center / cover;
 }
 ion-content ion-toolbar {
   --background: translucent;
@@ -57,11 +57,12 @@ ion-content ion-toolbar {
   height: 55px;
   padding-top: 5px;
   margin-bottom: 0px;
-  margin-top: 0px;
+  margin-top: 0px;  
 }
 
 .card-button-text {
-	font-family: FranklinGothic-Medium;														 
+  font-family: FranklinGothic-Medium;		
+  color:white;												 
 }
 
 .bottom-card-button-img {

@@ -178,6 +178,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'news-detalhe',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-news-detalhe/tab-news-detalhe.module').then(m => m.TabNewsDetalheModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tabSplash',
         pathMatch: 'full'
