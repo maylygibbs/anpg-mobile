@@ -10,81 +10,116 @@
 </ion-header>
 
 <ion-content>
-  <div style="background-color: transparent;height:20px;">
-  </div>
 
-  <div style="padding: 10px;">
-    <a routerLink="/tabs/news">
-      <div class="row" style="border-radius: 6px;background-color: white;height:60px;">
-        <div>
-          <img src="assets/icon/Noticias.svg" style="padding-top:10px;width: 48px;">                
-            Noticias        
-        </div>      
-      </div>
-    </a>
-  </div>
+  <ion-grid>
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" routerLink="/tabs/news">
+                <img src="assets/icon/Noticias.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Noticias
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
 
-  <div style="padding: 10px;">
-    <div class="row" style="border-radius: 6px;background-color: white;height:60px;">
-      <div>      
-        <img src="assets/icon/Entrevistas.svg" style="padding-top:10px;width: 30px;">
-          Entrevistas
-      </div>
-    </div>
-  </div>
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" >
+                <img src="assets/icon/Entrevistas.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Entrevistas
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
 
-  <div style="padding: 10px;">
-    <div class="row" style="border-radius: 6px;background-color: white;height:60px;">
-      <img src="assets/icon/Videos.svg" style="padding-top:10px;width: 48px;">
-      Vídeos
-    </div>
-  </div>
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" >
+                <img src="assets/icon/Videos.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Vídeos
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
 
-  <div style="padding: 10px;">
-    <div class="row" style="border-radius: 6px;background-color: white;height:60px;">
-      <img src="assets/icon/Artigos.svg" style="padding-top:10px;width: 48px;">
-      Artigos
-    </div>
-  </div>
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" >
+                <img src="assets/icon/Artigos.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Artigos
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
 
-  <div style="padding: 10px;">
-    <div class="row" style="border-radius: 6px;background-color: white;height:60px;">
-      <img src="assets/icon/Apresentacoes.svg" style="padding-top:10px;width: 48px;">
-      Apresentações
-    </div>
-  </div>
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" >
+                <img src="assets/icon/Apresentacoes.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Apresentações
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
 
-  <div style="padding: 10px;">
-    <div class="row" style="border-radius: 6px;background-color: white;height:60px;">
-      <img src="assets/icon/Galeria.svg" style="padding-top:10px;width: 48px;">      
-      Galeria
-    </div>
-  </div>
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" >
+                <img src="assets/icon/Galeria.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Galeria
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
 
-  <ion-card style="background-color: whitesmoke; color:#000;">
-    <div>
-      <table style="width:100%;line-height: 24px;">
-        <tr>
-          <td rowspan="3">
-            <img src="assets/icon/TickerBrent.svg" style="width: 48px;">
-          </td>            
-          <td>Petroleo Brent
-          <br>56.73$</td>
-          <td rowspan="3">
-            <img src="assets/icon/TickerWITI.svg" style="width: 48px;">
-          </td>
-          <td>Petroleo WTI
-          <br>56.73$</td>
-          <td rowspan="3">
-            <img src="assets/icon/TickerGas.svg" style="width: 48px;">
-          </td>
-          <td>Gás Natural
-          <br>2.489$</td>
-        </tr>
-      </table>
-    </div>
-  </ion-card>  
 
+   <ion-row class="ion-align-self-center">
+    <ion-col>
+      <ion-card style="background-color: whitesmoke; color:#000; margin-left: 0px;" class="card-button-cotacao">
+      <div>
+          <table style="width:100%;line-height: 24px;">
+            <tr>
+              <td rowspan="3">
+                <img src="assets/icon/TickerBrent.svg" class="bottom-card-button-img">
+              </td>            
+              <td class="card-button-text"><p style="line-height: 15px;">Petroleo Brent
+              <br>56.73$</p></td>
+              <td rowspan="3">
+                <img src="assets/icon/TickerWITI.svg" class="bottom-card-button-img">
+              </td>
+              <td class="card-button-text"><p style="line-height: 15px;">Petroleo WTI
+              <br>56.73$</p></td>
+              <td rowspan="3">
+                <img src="assets/icon/TickerGas.svg" class="bottom-card-button-img">
+              </td>
+              <td class="card-button-text"><p style="line-height: 15px;">Gás Natural
+              <br/>2.489$</p></td>
+            </tr>
+          </table>
+        </div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-grid> 
   
 
 </ion-content>

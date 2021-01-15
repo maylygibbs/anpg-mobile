@@ -168,6 +168,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'ano2020',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab-licitacoes/ano2020/ano2020.module').then(m => m.Ano2020PageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tabSplash',
         pathMatch: 'full'
