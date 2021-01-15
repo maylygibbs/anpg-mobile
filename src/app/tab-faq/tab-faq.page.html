@@ -10,36 +10,9 @@
 </ion-header>
 
 <ion-content>
- <!--  <div style="background-color: transparent;height:20px;">
-  </div>
-
-  <div style="padding: 10px;">
-    <ion-list>
-      <button (click)="expandItem(item)" ion-item *ngFor="let item of items">
-        <ion-card style="width:400px">
-          <ion-card-header>
-            <ion-card-title>{{ item.question }}</ion-card-title>
-          </ion-card-header>      
-          <ion-card-content>
-              {{ item.answer }}
-          </ion-card-content>
-        </ion-card>
-      </button>
-    </ion-list>
-
-  </div> -->
-
- <!--  <app-mi-accordion 
-     *ngFor="let technology of technologies" 
-     name="{{ technology.name }}" 
-     description="{{ technology.description }}" 
-     image="{{ technology.image }}" 
-     (change)="captureName($event)"> </app-mi-accordion>
- -->
   <app-mi-accordion 
-     *ngFor="let faq of faqs" 
+     *ngFor="let faq of faqs$ | async" 
      name="{{ faq.title }}" 
      description="{{ faq.answer }}" 
     > </app-mi-accordion>
-
 </ion-content>
