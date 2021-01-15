@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: Ano2020Page
+  },
+  {
+    path: 'pacotesdedados',
+    loadChildren: () => import('./pacotesdedados/pacotesdedados.module').then( m => m.PacotesdedadosPageModule)
   }
 ];
 

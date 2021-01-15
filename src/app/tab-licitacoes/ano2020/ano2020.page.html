@@ -4,10 +4,92 @@
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
     <ion-title>      
-      <img src="assets/icon/LogoSpashScreen.svg"> <span style="position:absolute;padding:35px;vertical-align: middle;font-weight: 800;font-family: Verdana, Geneva, Tahoma, sans-serif;">Licitações</span>
+      <img src="assets/icon/LogoSpashScreen.svg"> <span style="position:absolute;padding:35px;vertical-align: middle;font-weight: 800;font-family: Verdana, Geneva, Tahoma, sans-serif;">Licitação 2020</span>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-grid>
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button" > 
+            <ion-item lines="none">
+              <ion-label class="card-button-text">
+                Estratégia
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none">
+              <ion-label class="card-button-text">
+                Adjudicações
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" >
+              <ion-label class="card-button-text">
+                RoadShows
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" routerLink="/tabs/ano2020/pacotesdedados">
+              <ion-label class="card-button-text">
+                Pacotes de Dados
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+
+   <ion-row class="ion-align-self-center">
+    <ion-col>
+      <ion-card style="background-color: whitesmoke;opacity: 1; color:#000; margin-left: 0px;margin-top: 100px; border-radius: 12px;" class="card-button-cotacao">
+      <div>
+          <table style="width:100%;line-height: 24px;">
+            <tr>
+              <td rowspan="3">
+                <img src="assets/icon/TickerBrent.svg" class="bottom-card-button-img">
+              </td>            
+              <td class="card-button-text"><p style="line-height: 15px;">Petroleo Brent
+              <br>56.73$</p></td>
+              <td rowspan="3">
+                <img src="assets/icon/TickerWITI.svg" class="bottom-card-button-img">
+              </td>
+              <td class="card-button-text"><p style="line-height: 15px;">Petroleo WTI
+              <br>56.73$</p></td>
+              <td rowspan="3">
+                <img src="assets/icon/TickerGas.svg" class="bottom-card-button-img">
+              </td>
+              <td class="card-button-text"><p style="line-height: 15px;">Gás Natural
+              <br/>2.489$</p></td>
+            </tr>
+          </table>
+        </div>
+      </ion-card>
+    </ion-col>
+    </ion-row>
+
+  </ion-grid> 
+  
 </ion-content>
+
