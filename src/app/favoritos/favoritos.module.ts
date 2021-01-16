@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab3Page } from './tab3.page';
+import { FavoritosPage } from './favoritos.page';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -12,8 +12,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     FormsModule,
     SharedModule,
-    RouterModule.forChild([{ path: '', component: Tab3Page }])
+    RouterModule.forChild([{ path: '', component: FavoritosPage }])
   ],
-  declarations: [Tab3Page]
+  declarations: [FavoritosPage]
 })
-export class Tab3PageModule {}
+export class FavoritosPageModule {}
