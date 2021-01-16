@@ -3,17 +3,17 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab3Page } from './tab3.page';
-import { SharedModule } from '../shared/shared.module';
+import { TabDadosEap } from './tab-dados-eap.page';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
-    FormsModule,
+    FormsModule,    
     SharedModule,
-    RouterModule.forChild([{ path: '', component: Tab3Page }])
+    RouterModule.forChild([{ path: '', component: TabDadosEap }])
   ],
-  declarations: [Tab3Page]
+  declarations: [TabDadosEap]
 })
-export class Tab3PageModule {}
+export class TabDadosEapModule {}

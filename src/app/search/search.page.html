@@ -1,0 +1,27 @@
+
+<ion-content>
+  <app-header></app-header>
+  <div style="width: 100%;background-color: gray;padding-top:10px;">
+  <ion-searchbar style="color:white;" (input)="getItems($event)" placeholder="Buscar"></ion-searchbar>
+  </div>
+  <ion-list style="color:white;background-color: white;">
+    <ion-item *ngFor="let item of items" style="background-color: white;">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+  <!--
+  <ion-grid>
+    <ion-row>
+    <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+      <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="photoService.addNewToGallery()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  -->
+</ion-content>

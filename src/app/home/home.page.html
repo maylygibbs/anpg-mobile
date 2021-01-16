@@ -1,0 +1,172 @@
+<ion-content>    
+  <app-header></app-header>
+    <ion-grid style="padding-top:30px;">
+      <ion-row > 
+        <ion-col>
+          <ion-card class="card-button-top"> 
+            <ion-item lines="none" routerLink="/tabs/tab3">
+             <!--  <ion-thumbnail slot="start"> -->
+                <img src="assets/icon/MapaInterativo.svg" class="card-button-interactivo-img"> 
+              <!-- </ion-thumbnail> -->
+              <ion-label class="card-button-text">
+                Mapa Interactivo
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+      
+      <ion-row class="ion-align-self-center">
+        
+        <ion-col size="6">
+          <ion-card (click)="toToSalaDeImprensa()" class="card-button-left" style="cursor: pointer;">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int" >
+                <img src="assets/icon/SalaImprensa.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Sala Imprensa
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+        
+        <ion-col size="6"> 
+          <ion-card routerLink="/tabs/dados-eap" class="card-button-right">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/DadosEP.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Dados E&P
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-align-self-center">
+        
+        <ion-col size="6">
+          <ion-card routerLink="/tabs/informacao-juridica" class="card-button-left">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/InformacaoJuridica.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Informação Jurídica
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+        
+        <ion-col size="6"> 
+          <ion-card routerLink="/tabs/licitacoes" class="card-button-right">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/Licitacoes.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none"class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Licitações
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-align-self-center">
+        
+        <ion-col size="6">
+          <ion-card routerLink="/tabs/sobrenos" class="card-button-left">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/SobreNos.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Sobre Nós
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+        
+        <ion-col size="6"> 
+          <ion-card routerLink="/tabs/agendamento" class="card-button-right">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/AgendamentoVDR.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text ion-text-wrap" style="margin-top: 0px">
+                  Agendamento de Data Room
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-align-self-center">
+        
+        <ion-col size="6">
+          <ion-card routerLink="/tabs/glossario" class="card-button-left">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/Glossario.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  Glossario
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+        
+        <ion-col size="6"> 
+          <ion-card routerLink="/tabs/faq" class="card-button-right">
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-image card-button-int">
+                <img src="assets/icon/Faqs.svg">
+              </ion-item>
+            </ion-row>
+            <ion-row class="ion-align-self-center"> 
+              <ion-item lines="none" class="center-text card-button-int">
+                <ion-label class="card-button-text">
+                  FAQ's
+                </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-card> 
+        </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
+
+	<app-oil-sticker></app-oil-sticker>
+
+</ion-content>

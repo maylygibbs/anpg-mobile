@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>      
+      <img src="assets/icon/LogoSpashScreen.svg"> <span style="position:absolute;padding:35px;vertical-align: middle;font-weight: 800;font-family: Verdana, Geneva, Tahoma, sans-serif;">Licitações</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button" > 
+            <ion-item lines="none" routerLink="/tabs/ano2019">
+                <img src="assets/icon/LicitacoesAno.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                2019
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" routerLink="/tabs/ano2020">
+                <img src="assets/icon/LicitacoesAno.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                2020
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+     <!--  <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" >
+                <img src="assets/icon/LicitacoesAno.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                2021
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row> -->
+
+  </ion-grid> 
+
+  <app-oil-sticker></app-oil-sticker>
+  
+</ion-content>
+

@@ -8,22 +8,22 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'home',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../home/home.module').then(m => m.HomePageModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'search',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../search/search.module').then(m => m.SearchPageModule)
           }
         ]
       },
@@ -38,32 +38,32 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab4',
+        path: 'favoritos',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab4/tab4.module').then(m => m.Tab4PageModule)
+              import('../favoritos/favoritos.module').then(m => m.FavoritosPageModule)
           }
         ]
       },
       {
-        path: 'tab5',
+        path: 'utilizador',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab5/tab5.module').then(m => m.Tab5PageModule)
+              import('../utilizador/utilizador.module').then(m => m.UtilizadorPageModule)
           }
         ]
       },
       {
-        path: 'tabSplash',
+        path: 'splash',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tabSplash/tabSplash.module').then(m => m.TabSplashModule)
+              import('../shared/components/tab-splash/tab-splash.module').then(m => m.TabSplashModule)
           }
         ]
       },
@@ -73,17 +73,17 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tabNews/tabNews.module').then(m => m.TabNewsModule)
+              import('../home/tab-sala-de-imprensa/tab-news/tab-news.module').then(m => m.TabNewsModule)
           }
         ]
       },
       {
-        path: 'interactive-map',
+        path: 'mapa-interactivo',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-interactive-map/tab-interactive-map.module').then(m => m.TabInteractiveMapModule)
+              import('../home/tab-interactive-map/tab-interactive-map.module').then(m => m.TabInteractiveMapModule)
           }
         ]
       },
@@ -93,7 +93,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-sala-de-imprensa/tab-sala-de-imprensa.module').then(m => m.TabSalaDeImprensaModule)
+              import('../home/tab-sala-de-imprensa/tab-sala-de-imprensa.module').then(m => m.TabSalaDeImprensaModule)
           }
         ]
       },
@@ -103,7 +103,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-faq/tab-faq.module').then(m => m.TabFaqModule)
+              import('../home/tab-faq/tab-faq.module').then(m => m.TabFaqModule)
           }
         ]
       },
@@ -113,7 +113,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-agendamento-data-room/tab-agendamento-data-room.module').then(m => m.TabAgendamentoDataRoomModule)
+              import('../home/tab-agendamento-data-room/tab-agendamento-data-room.module').then(m => m.TabAgendamentoDataRoomModule)
           }
         ]
       },
@@ -123,7 +123,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-dados-eap/tab-dados-eap.module').then(m => m.TabDadosEapModule)
+              import('../home/tab-dados-eap/tab-dados-eap.module').then(m => m.TabDadosEapModule)
           }
         ]
       },
@@ -133,7 +133,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-favoritos/tab-favoritos.module').then(m => m.TabFavoritosModule)
+              import('../favoritos/favoritos.module').then(m => m.FavoritosPageModule)
           }
         ]
       },
@@ -143,7 +143,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-glossario/tab-glossario.module').then(m => m.TabGlossarioModule)
+              import('../home/tab-glossario/tab-glossario.module').then(m => m.TabGlossarioModule)
           }
         ]
       },
@@ -153,7 +153,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-informacao-juridica/tab-informacao-juridica.module').then(m => m.TabInformacaoJuridicaModule)
+              import('../home/tab-informacao-juridica/tab-informacao-juridica.module').then(m => m.TabInformacaoJuridicaModule)
           }
         ]
       },
@@ -163,7 +163,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-licitacoes/tab-licitacoes.module').then(m => m.TabLicitacoesModule)
+              import('../home/tab-licitacoes/tab-licitacoes.module').then(m => m.TabLicitacoesModule)
           }
         ]
       },
@@ -183,7 +183,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-licitacoes/ano2020/ano2020.module').then(m => m.Ano2020PageModule)
+              import('../home/tab-licitacoes/ano2020/ano2020.module').then(m => m.Ano2020PageModule)
           }
         ]
       },
@@ -223,20 +223,20 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-news-detalhe/tab-news-detalhe.module').then(m => m.TabNewsDetalheModule)
+              import('../home/tab-sala-de-imprensa/tab-news-detalhe/tab-news-detalhe.module').then(m => m.TabNewsDetalheModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tabSplash',
+        redirectTo: '/tabs/splash',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];
