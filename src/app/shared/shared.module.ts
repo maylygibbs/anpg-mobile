@@ -7,15 +7,16 @@ import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { OilStickerComponent } from './components/oil-sticker/oil-sticker.component';
+import { MiAccordionComponent } from './widgets/mi-accordion/mi-accordion.component';
  
 @NgModule({
-  declarations: [ExpandableComponent, MenuComponent, HeaderComponent, OilStickerComponent],
+  declarations: [ExpandableComponent, MenuComponent, HeaderComponent, OilStickerComponent, MiAccordionComponent],
   imports: [
     CommonModule,
     FormsModule,    
     IonicModule.forRoot(), 
   ],
-  exports: [ExpandableComponent, MenuComponent, HeaderComponent, OilStickerComponent],
+  exports: [ExpandableComponent, MenuComponent, HeaderComponent, OilStickerComponent, MiAccordionComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class SharedModule { }
