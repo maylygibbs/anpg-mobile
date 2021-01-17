@@ -7,13 +7,12 @@ import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { OilStickerComponent } from './components/oil-sticker/oil-sticker.component';
-
-
+ 
 @NgModule({
   declarations: [ExpandableComponent, MenuComponent, HeaderComponent, OilStickerComponent],
   imports: [
     CommonModule,
-    FormsModule,
+    FormsModule,    
     IonicModule.forRoot(), 
   ],
   exports: [ExpandableComponent, MenuComponent, HeaderComponent, OilStickerComponent],

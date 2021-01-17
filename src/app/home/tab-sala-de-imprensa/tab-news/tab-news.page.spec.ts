@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { TabNews } from './tabNews.page';
+import { TabNews } from './tab-news.page';
 
 describe('TabNews', () => {
   let component: TabNews;
