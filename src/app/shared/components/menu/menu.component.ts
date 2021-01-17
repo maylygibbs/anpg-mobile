@@ -79,4 +79,8 @@ export class MenuComponent {
   goToFAQ(): void {
     this.routeStateService.add("FAQ", "/tabs/faq/", null, false);    
   }  
+
+  goToNoticias(): void {
+    this.routeStateService.add("FAQ", "/tabs/news/", null, false);    
+  }
 }
