@@ -1,29 +1,16 @@
-<ion-grid>
-  <ion-row class="ion-align-self-center">
-    <ion-col>
-      <ion-card style="background-color: whitesmoke; color:#000;" class="card-button-cotacao">
-      <div>
-          <table style="width:100%;line-height: 24px;">
-            <tr>
+<div style="position: absolute;bottom: 0;left: 0;width: 100%;background-color: transparent;max-height: 100px;padding: 10px;">
+    <div style="background-color: white;border-radius: 5px;">        
+        <table style="width:100%;">
+          <tr>
+            <ng-container *ngFor="let price of oilPrice$ | async">
               <td rowspan="3">
-                <img src="assets/icon/TickerBrent.svg" class="bottom-card-button-img">
+                <img src="{{ price.img }}" class="bottom-card-button-img">
               </td>            
-              <td class="card-button-text"><p style="line-height: 15px;">Petroleo Brent
-              <br>56.73$</p></td>
-              <td rowspan="3">
-                <img src="assets/icon/TickerWITI.svg" class="bottom-card-button-img">
-              </td>
-              <td class="card-button-text"><p style="line-height: 15px;">Petroleo WTI
-              <br>56.73$</p></td>
-              <td rowspan="3">
-                <img src="assets/icon/TickerGas.svg" class="bottom-card-button-img">
-              </td>
-              <td class="card-button-text"><p style="line-height: 15px;">Gás Natural
-              <br/>2.489$</p></td>
-            </tr>
-          </table>
-        </div>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+              <td class="card-button-text"><p style="line-height: 15px;">
+                {{ price.label }}
+              <br>{{ price.formatted }}</p></td>
+            </ng-container>
+          </tr>
+        </table>
+      </div>
+</div>
