@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { OilPrice } from '../interfaces/oil-price.interface';
+import { OilPrice } from '../models/oil-price.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 
@@ -11,11 +11,43 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/c
 })
 export class OilPriceService {
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
-  OilPrices: OilPrice[] = [];
+  OilPrices: OilPrice[] = [
+    {
+      label: 'Petróleo Brent',
+      price: 56.73,
+      formatted: '56.73',
+      currency: '$',
+      code: 'Petróleo Brent',
+      type: '',
+      created_at: '',
+      img: 'assets/icon/TickerBrent.svg'
+    },
+    {
+      label: 'Petróleo WTI',
+      price: 56.73,
+      formatted: '56.73',
+      currency: '$',
+      code: 'Petróleo WTI',
+      type: '',
+      created_at: '',
+      img: 'assets/icon/TickerWITI.svg'
+    },
+    {
+      label: 'Gás Natural',
+      price: 56.73,
+      formatted: '2459.73',
+      currency: '$',
+      code: 'Gás Natural',
+      type: '',
+      created_at: '',
+      img: 'assets/icon/TickerGas.svg'
+    }    
+  ];
 
   getLatestPrices(): Observable<OilPrice[]> {
-    return this.http.get<OilPrice[]>("https://api.oilpriceapi.com/v1/prices/latest");
+    return of(this.OilPrices);
+    /*return this.http.get<OilPrice[]>("https://api.oilpriceapi.com/v1/prices/latest");*/
   }
 }
