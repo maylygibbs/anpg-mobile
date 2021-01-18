@@ -167,16 +167,16 @@ const routes: Routes = [
           }
         ]
       },
-      {
+       {
         path: 'ano2019',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-licitacoes/ano2019/ano2019.module').then(m => m.Ano2019PageModule)
+              import('../home/tab-licitacoes/ano2019/ano2019.module').then(m => m.Ano2019PageModule)
           }
         ]
-      },
+      }, 
       {
         path: 'ano2020',
         children: [
@@ -193,7 +193,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-licitacoes/ano2020/pacotesdedados/pacotesdedados.module').then(m => m.PacotesdedadosPageModule)
+              import('../home/tab-licitacoes/ano2020/pacotesdedados/pacotesdedados.module').then(m => m.PacotesdedadosPageModule)
           }
         ]
       },
@@ -203,7 +203,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-licitacoes/ano2020/pacotesdedados/congo/congo.module').then(m => m.CongoPageModule)
+              import('../home/tab-licitacoes/ano2020/pacotesdedados/congo/congo.module').then(m => m.CongoPageModule)
           }
         ]
       },
@@ -213,7 +213,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab-licitacoes/ano2020/pacotesdedados/kwanza/kwanza.module').then(m => m.KwanzaPageModule)
+              import('../home/tab-licitacoes/ano2020/pacotesdedados/kwanza/kwanza.module').then(m => m.KwanzaPageModule)
           }
         ]
       },
@@ -230,6 +230,10 @@ const routes: Routes = [
       {
         path: 'sobrenos',
         loadChildren: () => import('../home/sobrenos/sobrenos.module').then( m => m.SobrenosPageModule)
+      },
+      {
+        path: 'decretos',
+        loadChildren: () => import('../home/tab-informacao-juridica/decretos/decretos.module').then( m => m.DecretosPageModule)
       },
       {
         path: '',

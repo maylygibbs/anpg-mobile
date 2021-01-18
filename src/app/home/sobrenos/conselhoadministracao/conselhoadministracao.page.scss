@@ -9,9 +9,13 @@ ion-content {
     margin: auto;
   }
    */
-  ion-row {
-    text-align: center;
-    }
+ion-row {
+  text-align: center;
+  }
+
+ion-col{
+    opacity: 0.8;
+  }
 
 h2 {
         cursor: pointer;

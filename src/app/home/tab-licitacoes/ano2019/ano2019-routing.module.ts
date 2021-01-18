@@ -7,7 +7,8 @@ const routes: Routes = [
   {
     path: '',
     component: Ano2019Page
-  }
+  },
+ 
 ];
 
 @NgModule({

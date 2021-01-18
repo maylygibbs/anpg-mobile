@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { KwanzaPageRoutingModule } from './kwanza-routing.module';
 
 import { KwanzaPage } from './kwanza.page';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    SharedModule,
     KwanzaPageRoutingModule
   ],
   declarations: [KwanzaPage]
