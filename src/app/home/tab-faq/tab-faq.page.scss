@@ -1,0 +1,47 @@
+ion-content {
+  --background: #86888fbd url("../../../assets/img/angola2x.png") no-repeat right
+    top;
+}
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.column {
+  float: left;
+  padding: 0 5px 5px 5px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.center-content {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.vertical-line {
+  border-left: 6px solid gray;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}

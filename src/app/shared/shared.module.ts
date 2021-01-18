@@ -3,19 +3,20 @@ import { CommonModule } from '@angular/common';
 import { ExpandableComponent } from './components/expandable/expandable.component';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { TabFaq } from '../tab-faq/tab-faq.page';
-import { RouterModule } from '@angular/router';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
-
-
+import { MenuComponent } from './components/menu/menu.component';
+import { HeaderComponent } from './components/header/header.component';
+import { OilStickerComponent } from './components/oil-sticker/oil-sticker.component';
+import { MiAccordionComponent } from './widgets/mi-accordion/mi-accordion.component';
+ 
 @NgModule({
-  declarations: [ExpandableComponent],
+  declarations: [ExpandableComponent, MenuComponent, HeaderComponent, OilStickerComponent, MiAccordionComponent],
   imports: [
     CommonModule,
-    FormsModule,
-    IonicModule,    
+    FormsModule,    
+    IonicModule.forRoot(), 
   ],
-  exports: [ExpandableComponent],
+  exports: [ExpandableComponent, MenuComponent, HeaderComponent, OilStickerComponent, MiAccordionComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class SharedModule { }
