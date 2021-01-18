@@ -1,12 +1,15 @@
 <ion-content>
-  <app-header></app-header>
+  <app-header-utilizador></app-header-utilizador>
   <div style="background-color: transparent;height:10px;">
   </div>
 
   <ion-header collapse="condense" style="background-color: gray; color:white;">
     <ion-toolbar>
-      <ion-title size="large">Utilizador</ion-title>
+      <ion-title size="large" *ngIf="!currentUser">Utilizador</ion-title>
+      <ion-title size="large" *ngIf="currentUser">{{ currentUser.firstName }}</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  
 
 </ion-content>
