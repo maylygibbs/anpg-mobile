@@ -1,8 +1,66 @@
 <ion-content>
   <app-header></app-header>
-  <div style="background-color: transparent;height:20px;">
-  </div>
-  
-  <app-oil-sticker></app-oil-sticker>
+  <ion-header collapse="condense" style="background-color: gray; color:white;">
+    <ion-toolbar>
+      <ion-title size="large">Informação Juridica</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid style="padding-top: 40px;">
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button" > 
+            <ion-item lines="none" routerLink="/tabs/ano2019">
+                <img src="assets/icon/LicitacoesAno.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Decretos Presidenciais
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
 
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" routerLink="/tabs/ano2020">
+                <img src="assets/icon/LicitacoesAno.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Quadro Legal
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" routerLink="/tabs/ano2020">
+                <img src="assets/icon/LicitacoesAno.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Tipologia de Contratos
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" routerLink="/tabs/ano2020">
+                <img src="assets/icon/LicitacoesAno.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Legislação Adicional
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+  
+
+  </ion-grid> 
+
+  <app-oil-sticker></app-oil-sticker>
+  
 </ion-content>

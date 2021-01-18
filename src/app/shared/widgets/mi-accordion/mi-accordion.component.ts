@@ -33,8 +33,8 @@ export class MiAccordionComponent implements OnInit {
    * @property image
    * @type {string}
    */
-/*   @Input()
-  image : string; */
+   @Input()
+  image : string; 
 
   /**
    * The change event that will be broadcast to the parent component when the user interacts with the component's 
