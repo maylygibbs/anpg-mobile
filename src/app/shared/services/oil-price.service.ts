@@ -17,7 +17,7 @@ export class OilPriceService {
     {
       label: 'Petróleo Brent',
       price: 56.73,
-      formatted: '56.73',
+      formatted: '56.73$',
       currency: '$',
       code: 'Petróleo Brent',
       type: '',
@@ -27,7 +27,7 @@ export class OilPriceService {
     {
       label: 'Petróleo WTI',
       price: 56.73,
-      formatted: '56.73',
+      formatted: '56.73$',
       currency: '$',
       code: 'Petróleo WTI',
       type: '',
@@ -37,7 +37,7 @@ export class OilPriceService {
     {
       label: 'Gás Natural',
       price: 56.73,
-      formatted: '2459.73',
+      formatted: '2.489$',
       currency: '$',
       code: 'Gás Natural',
       type: '',
