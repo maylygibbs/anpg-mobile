@@ -4,10 +4,10 @@
   {{ name }}
 </h2>
 <div [ngClass]="this.isMenuOpen ? 'active' : 'inactive'">
-   <!-- <section class="image-wrapper">
+  <section *ngIf=" image !== ''" class="image-wrapper">
    	  <img [src]="image">
-   </section> -->
-   <p>{{ description }}</p>
+   </section>
+   <p *ngIf=" description !== ''">{{ description }}</p>
    <!-- <ion-button 
       type="button" 
       color="primary" 

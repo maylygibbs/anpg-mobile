@@ -1,8 +1,14 @@
 
 <ion-content>
   <app-header></app-header>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ANPG Buscar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
   <div style="width: 100%;background-color: gray;padding-top:10px;">
-  <ion-searchbar style="color:white;" (input)="getItems($event)" placeholder="Buscar"></ion-searchbar>
+    <ion-searchbar style="color:white;" (input)="getItems($event)" placeholder="Buscar"></ion-searchbar>
   </div>
   <ion-list style="color:white;background-color: white;">
     <ion-item *ngFor="let item of items" style="background-color: white;">

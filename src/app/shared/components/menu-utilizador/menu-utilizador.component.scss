@@ -1,0 +1,17 @@
+ion-header,
+ion-content,
+ion-toolbar,
+ion-menu,
+ion-card,
+ion-list,
+ion-item {
+  --background: white;
+}
+
+.header-md::after {
+    background-color: white!important;
+}
+
+.list-md {
+    background-color: white!important;
+}

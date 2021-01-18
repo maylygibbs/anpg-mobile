@@ -228,6 +228,10 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'sobrenos',
+        loadChildren: () => import('../home/sobrenos/sobrenos.module').then( m => m.SobrenosPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/splash',
         pathMatch: 'full'

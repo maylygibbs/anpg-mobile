@@ -1,0 +1,31 @@
+ion-content {
+    --background: #818386 url("/assets/img/angola2x.png") no-repeat right top;
+  }
+/* 
+  .col img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+   */
+  ion-row {
+    text-align: center;
+    }
+
+h2 {
+        cursor: pointer;
+        position: relative;
+        padding: 1em 0.35em;
+        font-size: 1rem;
+        /*font-family: Verdana;*/
+        font-family: Franklin Gothic Book;
+        border-bottom: 1px solid rgba(210, 210, 210, 1);
+        margin: 0;
+      
+        /* Define the style rules for the 'arrow icons' */
+        span {
+          display: none;
+        }
+      }
+      
