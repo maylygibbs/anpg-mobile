@@ -236,6 +236,10 @@ const routes: Routes = [
         loadChildren: () => import('../home/tab-informacao-juridica/decretos/decretos.module').then( m => m.DecretosPageModule)
       },
       {
+        path: 'mapas',
+        loadChildren: () => import('../home/mapas/mapas.module').then( m => m.MapasPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/splash',
         pathMatch: 'full'
