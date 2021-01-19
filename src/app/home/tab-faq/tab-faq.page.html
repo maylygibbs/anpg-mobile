@@ -1,14 +1,8 @@
 <ion-content>
-  <app-header></app-header>
+  <app-header title="FAQ"></app-header>
   <div style="background-color: transparent;height:10px; margin-top: 40px;">
   </div>
-
-<!--   <ion-header collapse="condense" style="background-color: gray; color:white;">
-    <ion-toolbar>
-      <ion-title size="large">FAQ</ion-title>
-    </ion-toolbar>
-  </ion-header>
- -->
+  
   <app-mi-accordion 
      *ngFor="let faq of faqs$ | async" 
      name="{{ faq.title }}" 

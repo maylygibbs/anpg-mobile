@@ -4,3 +4,8 @@ ion-content {
   ion-content ion-toolbar {
     --background: translucent;
   }
+
+  ion-card, ion-item{  
+    opacity: 0.8;
+    fill: rgba(224,225,227,1);
+  }

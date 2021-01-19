@@ -1,30 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { RouteStateService } from '../../services/route-state.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  styleUrls: ['./menu.component.scss' ]
 })
 export class MenuComponent {
 
-  
   rootPage: any;
 
-  menuItems = [
-    {
-      item: 'Teste 1'
-    },
-    {
-      item: 'Teste 2'
-    }
-
-  ];
+  @Input() title: string;
 
   constructor(public menuCtrl: MenuController,
               public routeStateService: RouteStateService) {
-    
+
   }
  
   openMenu() {
