@@ -18,13 +18,14 @@
 
   <div>
       <ng-container *ngFor='let item of noticias$ | async'>
-        <div style="padding:10px;cursor: pointer;" (click)="detalhe(item)">
-          <table>            
+        <div style="padding:5px;cursor: pointer!important;" (click)="detalhe(item)">
+          <table>
               <tr>
-                <td rowspan="2" style="max-width: 30%;"><img [src]="item.img" style="max-width:40px;"></td>
-                <td class="news-text" rowspan="2" style="padding-left:10px;text-align: left;vertical-align: top;">
-                  <b>{{ item.title.substring(1,100) }}</b><br>
-                  <div [innerHTML]="item.text.substring(0,150)"></div>
+                <td rowspan="3"><img [src]="item.img" style="max-width:40px;"></td>
+                <td class="news-text" rowspan="3" style="padding-left:10px;text-align: left;vertical-align: top;line-height:10px;">
+                  <b>{{ item.sector }} |</b><br>
+                  <!--{{ item.title.substring(1,25) }}<br>-->
+                  <div [innerHTML]="item.text.substring(0,200)"></div>
                 </td>              
               </tr>              
           </table>
