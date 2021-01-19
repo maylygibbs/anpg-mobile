@@ -11,8 +11,10 @@
   </div>
   <div>
       <div style="padding:10px;">
-        <h5>{{ noticia$.title }}</h5>
-        <div [innerHTML]="noticia$.text"></div>
+        <span class="news-detalhe-sector"><b>{{ noticia$.sector }}</b></span>
+        <h4 class="news-detalhe-title"><b>{{ noticia$.title }}</b></h4>
+        <hr>
+        <div class="news-detalhe-text" [innerHTML]="noticia$.text"></div>
       </div>
   </div>
 </ion-content>
