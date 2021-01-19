@@ -2,28 +2,28 @@
   <app-header></app-header>
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Notícias</ion-title>
+      <ion-title size="large" style="color:black;">Notícias</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div>
-    <img src="assets/img/noticia_5_2x.png" style="width: 100%;">
-    <div style="height:43px;background-color: darkred;color:white;padding-top: -3px;">
-      <ng-container *ngFor="let item of sectors$ | async">
-        <ion-button>
-                <span>{{ item.name }}</span>
-        </ion-button>
-      </ng-container>          
-    </div>
+  <img class="responsive" src="assets/img/noticia_5_2x.png" style="width: 100%;">
+  <div style="height:24px;background-color: darkred;color:white;padding:5px;font-size: small;">
+    <span style="color:orangered;font-weight: 600;">INOVACAO</span> | REGULACAO | CAPITAL HUMANO
+    <!--
+    <ng-container *ngFor="let item of sectors$ | async">
+              <span>{{ item.name }}</span>
+    </ng-container>
+    -->
   </div>
+
   <div>
       <ng-container *ngFor='let item of noticias$ | async'>
         <div style="padding:10px;cursor: pointer;" (click)="detalhe(item)">
           <table>            
               <tr>
-                <td rowspan="2" style="max-width: 30%;"><img [src]="item.img" style="max-width:80px;"></td>
-                <td rowspan="2" style="padding-left:10px;text-align: left;vertical-align: top;">
-                  <b>{{ item.title }}</b><br>
+                <td rowspan="2" style="max-width: 30%;"><img [src]="item.img" style="max-width:40px;"></td>
+                <td class="news-text" rowspan="2" style="padding-left:10px;text-align: left;vertical-align: top;">
+                  <b>{{ item.title.substring(1,100) }}</b><br>
                   <div [innerHTML]="item.text.substring(0,150)"></div>
                 </td>              
               </tr>              
