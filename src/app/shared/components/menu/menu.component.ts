@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { filter } from 'rxjs/operators';
 import { RouteStateService } from '../../services/route-state.service';
 
 @Component({
@@ -9,6 +11,7 @@ import { RouteStateService } from '../../services/route-state.service';
 })
 export class MenuComponent {
 
+  previousUrl: string;
   
   rootPage: any;
 
@@ -23,8 +26,14 @@ export class MenuComponent {
   ];
 
   constructor(public menuCtrl: MenuController,
-              public routeStateService: RouteStateService) {
-    
+              public routeStateService: RouteStateService,
+              private router: Router) {
+    router.events
+    .pipe(filter(event => event instanceof NavigationEnd))
+    .subscribe((event: NavigationEnd) => {
+      /*console.log('prev:', event.url);*/
+      this.previousUrl = event.url;
+    });
   }
  
   openMenu() {
@@ -39,6 +48,11 @@ export class MenuComponent {
     this.menuCtrl.toggle();
   }
 
+  goBack(): void {    
+    this.router.navigate([this.previousUrl], null);
+    /*this.routeStateService.add("Voltar", this.previousUrl + '/', null, false);*/
+    /*this.routeStateService.loadPrevious();*/
+  }
 
   goToHome(): void {
     this.routeStateService.add("Home", "/", null, false);
