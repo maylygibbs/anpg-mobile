@@ -10,9 +10,9 @@ ion-item {
 ion-header,ion-toolbar{
   --background:#818386;
 }
-/* ion-toolbar{
-  --min-height:4%!important;
-} */
+ ion-toolbar{
+  --min-height:2%!important;
+} 
 /* .app-header-statusbar {
 	font-size: 80%;
 	vertical-align: middle;
@@ -36,7 +36,13 @@ ion-title,ion-back-button,ion-menu-button{
   float: right;
 }
 .imagem-toolbar{
-  height: 24px;
   padding: 5px;
+  padding-top: 7px;
+  width: 30px;
 }
-
+.header-title{
+  float: left;
+  font-size: 12px;
+  font-family: FranklinGothic-Medium;
+  padding-top: 7px;
+}

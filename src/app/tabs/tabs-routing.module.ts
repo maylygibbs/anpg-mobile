@@ -167,56 +167,6 @@ const routes: Routes = [
           }
         ]
       },
-       {
-        path: 'ano2019',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../home/tab-licitacoes/ano2019/ano2019.module').then(m => m.Ano2019PageModule)
-          }
-        ]
-      }, 
-      {
-        path: 'ano2020',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../home/tab-licitacoes/ano2020/ano2020.module').then(m => m.Ano2020PageModule)
-          }
-        ]
-      },
-      {
-        path: 'ano2020/pacotesdedados',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../home/tab-licitacoes/ano2020/pacotesdedados/pacotesdedados.module').then(m => m.PacotesdedadosPageModule)
-          }
-        ]
-      },
-      {
-        path: 'ano2020/pacotesdedados/congo',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../home/tab-licitacoes/ano2020/pacotesdedados/congo/congo.module').then(m => m.CongoPageModule)
-          }
-        ]
-      },
-      {
-        path: 'ano2020/pacotesdedados/kwanza',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../home/tab-licitacoes/ano2020/pacotesdedados/kwanza/kwanza.module').then(m => m.KwanzaPageModule)
-          }
-        ]
-      },
       {
         path: 'news-detalhe',
         children: [
@@ -230,10 +180,6 @@ const routes: Routes = [
       {
         path: 'sobrenos',
         loadChildren: () => import('../home/sobrenos/sobrenos.module').then( m => m.SobrenosPageModule)
-      },
-      {
-        path: 'decretos',
-        loadChildren: () => import('../home/tab-informacao-juridica/decretos/decretos.module').then( m => m.DecretosPageModule)
       },
       {
         path: 'mapas',

@@ -1,10 +1,10 @@
 
 <ion-menu side="end" type="overlay" swipeEnabled="true" content-id="main-content">
-  <ion-header>
-    <ion-toolbar transparent>
+  <!-- <ion-header>
+    <ion-toolbar >
       &nbsp;
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
   <ion-content>
     <ion-list>      
@@ -61,19 +61,22 @@
   </ion-content>
 </ion-menu>
 
+
+
 <div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
+  <!-- <ion-header> -->
+     <ion-toolbar>
       <ion-buttons *ngIf="title!=='Inicio'" slot="start">
         <ion-back-button icon="" text=" << " defaultHref="/"></ion-back-button>
       </ion-buttons>
       <ion-buttons *ngIf="title==='Inicio'" slot="start">
-        <ion-back-button icon="" text="    " defaultHref="/"></ion-back-button> <!-- TODO rever isto por que tirando vai a vida a formatação to ion-title abaixo -->
+        <ion-back-button icon="" text="    " defaultHref="/"></ion-back-button> <!-- Isto está assim por que tirando vai a vida a formatação to ion-title abaixo -->
       </ion-buttons>
-      <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
+     <ion-buttons slot="end">
+         <ion-menu-button style="height: 20px;"></ion-menu-button> 
       </ion-buttons>
-      <ion-title style="width: 120%;margin-left:-20px ;"><span style="float: left;">{{ title }}</span><span class="imagem-container"><img src="assets/icon/BandeiraInglesa.svg" class="imagem-toolbar"><img src="assets/icon/BandeiraAngolana.svg" class="imagem-toolbar"></span></ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <ion-title style="width: 120%;margin-left:-20px ;"><span class="header-title">{{ title }}</span><span class="imagem-container"><img src="assets/icon/gb.svg" class="imagem-toolbar"><img src="assets/icon/ao.svg" class="imagem-toolbar"></span></ion-title>
+    </ion-toolbar> 
+  <!--  </ion-header> -->
 </div>
+ 
