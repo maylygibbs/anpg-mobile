@@ -1,13 +1,30 @@
-ion-header,
+
 ion-content,
-ion-toolbar,
+
 ion-menu,
 ion-card,
 ion-list,
 ion-item {
   --background: white;
 }
+ion-header,ion-toolbar{
+  --background:#818386;
+}
+ ion-toolbar{
+  --min-height:2%!important;
+} 
+/* .app-header-statusbar {
+	font-size: 80%;
+	vertical-align: middle;
+	--min-height: 24px !important;
+}
+.toolbar-container {
+  height: 24px;
+} */
 
+ion-title,ion-back-button,ion-menu-button{
+  color: white;
+}
 .header-md::after {
     background-color: white!important;
 }
@@ -15,7 +32,17 @@ ion-item {
 .list-md {
     background-color: white!important;
 }
-
-ion-back-button {
-  display: block;
+.imagem-container{
+  float: right;
+}
+.imagem-toolbar{
+  padding: 5px;
+  padding-top: 7px;
+  width: 30px;
+}
+.header-title{
+  float: left;
+  font-size: 12px;
+  font-family: FranklinGothic-Medium;
+  padding-top: 7px;
 }

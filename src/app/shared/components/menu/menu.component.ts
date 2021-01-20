@@ -1,39 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-import { filter } from 'rxjs/operators';
 import { RouteStateService } from '../../services/route-state.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  styleUrls: ['./menu.component.scss' ]
 })
 export class MenuComponent {
 
-  previousUrl: string;
-  
   rootPage: any;
 
-  menuItems = [
-    {
-      item: 'Teste 1'
-    },
-    {
-      item: 'Teste 2'
-    }
-
-  ];
+  @Input() title: string;
 
   constructor(public menuCtrl: MenuController,
-              public routeStateService: RouteStateService,
-              private router: Router) {
-    router.events
-    .pipe(filter(event => event instanceof NavigationEnd))
-    .subscribe((event: NavigationEnd) => {
-      /*console.log('prev:', event.url);*/
-      this.previousUrl = event.url;
-    });
+              public routeStateService: RouteStateService) {
+
   }
  
   openMenu() {
@@ -48,11 +30,6 @@ export class MenuComponent {
     this.menuCtrl.toggle();
   }
 
-  goBack(): void {    
-    this.router.navigate([this.previousUrl], null);
-    /*this.routeStateService.add("Voltar", this.previousUrl + '/', null, false);*/
-    /*this.routeStateService.loadPrevious();*/
-  }
 
   goToHome(): void {
     this.routeStateService.add("Home", "/", null, false);
