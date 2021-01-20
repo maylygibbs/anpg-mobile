@@ -4,7 +4,7 @@
       <ion-row > 
         <ion-col>
           <ion-card class="card-button-top"> 
-            <ion-item lines="none" routerLink="/tabs/tab3">
+            <ion-item lines="none" (click)="goToMapaInteractivo()">
              <!--  <ion-thumbnail slot="start"> -->
                 <img src="assets/icon/MapaInterativo.svg" class="card-button-interactivo-img"> 
               <!-- </ion-thumbnail> -->
@@ -36,7 +36,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card routerLink="/tabs/dados-eap" class="card-button-right">
+          <ion-card (click)="goToDadosEap()" class="card-button-right">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/DadosEP.svg">
@@ -56,7 +56,7 @@
       <ion-row class="ion-align-self-center">
         
         <ion-col size="6">
-          <ion-card routerLink="/tabs/informacao-juridica" class="card-button-left">
+          <ion-card (click)="goToInformacoesJuridicas()" class="card-button-left">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/InformacaoJuridica.svg">
@@ -73,7 +73,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card routerLink="/tabs/licitacoes" class="card-button-right">
+          <ion-card (click)="goToLicitacoes()" class="card-button-right">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/Licitacoes.svg">
@@ -93,7 +93,7 @@
       <ion-row class="ion-align-self-center">
         
         <ion-col size="6">
-          <ion-card routerLink="/tabs/sobrenos" class="card-button-left">
+          <ion-card (click)="goToSobreNos()" class="card-button-left">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/SobreNos.svg">
@@ -110,7 +110,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card routerLink="/tabs/agendamento" class="card-button-right">
+          <ion-card (click)="goToAgendamentoDataRoom()" class="card-button-right">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/AgendamentoVDR.svg">
@@ -147,7 +147,7 @@
         </ion-col> -->
 
         <ion-col size="6">
-          <ion-card routerLink="/tabs/mapas" class="card-button-left">
+          <ion-card (click)="goToMapas()" class="card-button-left">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/MapaInterativo.svg">
@@ -164,7 +164,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card routerLink="/tabs/faq" class="card-button-right">
+          <ion-card (click)="goToFAQs()" class="card-button-right">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/Faqs.svg">

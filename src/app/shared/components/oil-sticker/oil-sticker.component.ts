@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { OilPrice } from '../../models/oil-price.model';
+import { IOilPrice } from '../../interfaces/ioil-price.interface';
 import { OilPriceService } from '../../services/oil-price.service';
 
 @Component({
@@ -10,18 +10,27 @@ import { OilPriceService } from '../../services/oil-price.service';
 })
 export class OilStickerComponent implements OnInit {
 
-  oilPrice$: Observable<OilPrice[]>;
+  oilPrice$: Observable<IOilPrice[]>;
 
-  constructor(private oilPriceService: OilPriceService) { 
-    this.oilPrice$ = this.getPrice();
+  brentOil: IOilPrice;
+
+  constructor(private oilPriceService: OilPriceService) {
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getPrice();
+  }
 
-  getPrice(): Observable<OilPrice[]> {
-    const prices = this.oilPriceService.getLatestPrices();
-    console.log(prices);
-    return prices;
+  getPrice(): void {    
+    this.oilPriceService.getLatestAPI().subscribe(x => {
+      this.brentOil = x['data'];
+      this.oilPrice$ = this.oilPriceService.getLatestPrices();
+      this.oilPrice$.forEach(element => {    
+        element.forEach(x => {
+          if (x['code'] = 'BRENT_CRUDE_USD') {
+            x['formatted'] = this.brentOil.formatted;
+          }})
+      });    
+    });
   } 
-
 }

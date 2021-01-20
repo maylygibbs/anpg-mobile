@@ -11,7 +11,39 @@ export class HomePage {
   constructor(private routeStateService: RouteStateService) {}
 
   toToSalaDeImprensa(): void {
-    this.routeStateService.add("Sala de Imprensa", "/tabs/sala-de-imprensa/", null, false);    
+    this.routeStateService.toToSalaDeImprensa();
+  }
+
+  goToMapaInteractivo(): void {
+    this.routeStateService.goToMapaInteractivo();
+  }
+
+  goToDadosEap(): void {
+    this.routeStateService.goToDadosEap();
+  }
+
+  goToInformacoesJuridicas(): void {
+    this.routeStateService.goToInformacoesJuridicas();
+  }
+
+  goToLicitacoes(): void {
+    this.routeStateService.goToLicitacoes();
+  }
+
+  goToSobreNos(): void {
+    this.routeStateService.goToSobreNos();
+  }
+
+  goToAgendamentoDataRoom(): void {
+    this.routeStateService.goToAgendamentoDataRoom();
+  }
+
+  goToMapas(): void {
+    this.routeStateService.goToMapas();
+  }
+
+  goToFAQs(): void {
+    this.routeStateService.goToFAQs();
   }
 
 }

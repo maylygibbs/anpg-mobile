@@ -10,15 +10,19 @@ import { OilStickerComponent } from './components/oil-sticker/oil-sticker.compon
 import { MiAccordionComponent } from './widgets/mi-accordion/mi-accordion.component';
 import { MenuUtilizadorComponent } from './components/menu-utilizador/menu-utilizador.component';
 import { HeaderUtilizadorComponent } from './components/header-utilizador/header-utilizador.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+/*import { OilPriceInterceptor } from './interceptor/oil-price.interceptor';*/
  
 @NgModule({
   declarations: [ExpandableComponent, MenuComponent, HeaderComponent, OilStickerComponent, MiAccordionComponent, MenuUtilizadorComponent, HeaderUtilizadorComponent],
   imports: [
     CommonModule,
-    FormsModule,    
+    FormsModule,
+    HttpClientModule, 
     IonicModule.forRoot(), 
   ],
   exports: [ExpandableComponent, MenuComponent, HeaderComponent, OilStickerComponent, MiAccordionComponent, MenuUtilizadorComponent, HeaderUtilizadorComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
+  /*providers: [{ provide: HTTP_INTERCEPTORS, useClass: OilPriceInterceptor, multi: true }]*/
 })
 export class SharedModule { }

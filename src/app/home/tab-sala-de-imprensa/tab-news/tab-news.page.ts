@@ -31,7 +31,7 @@ export class TabNews {
   }
 
   detalhe(item: INews): void {        
-    console.log(item);
+    /*console.log(item);*/
     this.routeStateService.add("Noticias", "/tabs/news-detalhe/", item, false);        
   }
 
