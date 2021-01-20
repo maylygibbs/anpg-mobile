@@ -7,8 +7,10 @@ import { RouteStateService } from '../../shared/services/route-state.service';
   styleUrls: ['tab-sala-de-imprensa.page.scss']
 })
 export class TabSalaDeImprensa {
-    
-  constructor(private routeStateService: RouteStateService) {}
+  
+  constructor() {}
+
+  /* constructor(private routeStateService: RouteStateService) {}
 
   goBack(): void {
     this.routeStateService.loadPrevious();
@@ -16,5 +18,5 @@ export class TabSalaDeImprensa {
 
   goToNoticias(): void {
     this.routeStateService.add("Sala de Imprensa", "/tabs/news/", null, false);    
-  }
+  } */
 }
