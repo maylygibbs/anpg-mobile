@@ -43,13 +43,11 @@ export class PacotesdedadosPage implements OnInit {
     };   */
 
 
-    this.http.get(this.kwanzaPDF, {
+    const proxyurl = "https://cors-anywhere.herokuapp.com/"; // para evitar o erro de CORS
+
+    this.http.get(proxyurl+this.kwanzaPDF, {
       responseType:'blob',
-      observe: 'events',
-      headers: new HttpHeaders(
-        { 
-          'Access-Control-Allow-Origin': '*'
-        })
+      observe: 'events'
     }).subscribe(async event =>{
       if (event.type === HttpEventType.Response){
         const name = this.kwanzaPDF.substr(this.kwanzaPDF.lastIndexOf('/')+1);
@@ -62,8 +60,8 @@ export class PacotesdedadosPage implements OnInit {
         });
 
         const path = savedFile.uri;
-
-        this.fileOpener.open(path,'application/pdf').then(()=> console.log('Abriu')).catch(error=>console.log('Nao abriu ',error));
+console.log(path);
+//        this.fileOpener.open(path,'application/pdf').then(()=> console.log('Abriu')).catch(error=>console.log('Nao abriu ',error));
 
         /* Storage.set({
           key: FILE_KEY,
