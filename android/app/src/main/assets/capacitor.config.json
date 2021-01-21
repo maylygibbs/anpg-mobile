@@ -1,8 +1,27 @@
 {
-  "appId": "io.ionic.demo.pg.cap.ng",
-  "appName": "Photo Gallery Cap Ng",
+  "appId": "ao.co.anpg.ionic",
+  "appName": "ANPG App",
   "bundledWebRuntime": false,
   "npmClient": "npm",
-  "webDir": "www",
-  "cordova": {}
+  "webDir": "dist/angular-anpg-mobile-app",
+  "cordova": {},
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 5000,
+      "launchAutoHide": true,
+      "backgroundColor": "#ffffffff",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "androidSpinnerStyle": "large",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#999999",
+      "showSpinner": true,
+      "splashFullScreen": true,
+      "splashImmersive": true
+    }
+  },
+  "server": {
+    "url": "http://localhost:8100",
+    "cleartext": true
+  }
 }
