@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: ''
+  apiUrl: '',
+  oilPriceApiToken: '62ea1c3b053b3f170764aec1e0ecb43e',
 };
 
 /*

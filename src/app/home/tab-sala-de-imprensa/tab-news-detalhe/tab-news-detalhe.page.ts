@@ -21,7 +21,7 @@ export class TabNewsDetalhe implements OnInit, AfterViewInit {
   ngOnInit(): void {
     var routeState = this.routeStateService.getCurrent();
     this.noticia$ = routeState.data;
-    console.log(routeState.data);
+    /*console.log(routeState.data);*/
   }
   ngAfterViewInit(): void {
   }
