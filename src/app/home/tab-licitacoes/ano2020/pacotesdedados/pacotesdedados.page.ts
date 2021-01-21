@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Plugins, FilesystemDirectory } from '@capacitor/core';
-import { HttpClient, HttpEventType } from '@angular/common/http';
+import { HttpClient, HttpEventType, HttpHeaders } from '@angular/common/http';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 const { Filesystem, Storage } = Plugins;
 
@@ -32,9 +32,24 @@ export class PacotesdedadosPage implements OnInit {
     window.open("https://anpg.co.ao/wp-content/uploads/2021/01/Data_pack_CON_CONTENT_LIST.pdf", '_system');
   } */
   OpenKwanzaPDF(){
+/* 
+    const httpOptions = {
+      responseType:'blob',
+      observe: 'events',
+      headers: new HttpHeaders(
+        { 
+          'Access-Control-Allow-Origin': '*'
+        })
+    };   */
+
+
     this.http.get(this.kwanzaPDF, {
       responseType:'blob',
-      observe: 'events'
+      observe: 'events',
+      headers: new HttpHeaders(
+        { 
+          'Access-Control-Allow-Origin': '*'
+        })
     }).subscribe(async event =>{
       if (event.type === HttpEventType.Response){
         const name = this.kwanzaPDF.substr(this.kwanzaPDF.lastIndexOf('/')+1);
