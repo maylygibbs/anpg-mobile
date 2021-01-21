@@ -20,8 +20,8 @@ export class PacotesdedadosPage implements OnInit {
     reader.onload = () => {
       resolve(reader.result);
     };
-    reader.readAsDataURL(blob),
-  })
+    reader.readAsDataURL(blob);
+  });
   
   constructor(private http:HttpClient, private fileOpener: FileOpener) { }
 
