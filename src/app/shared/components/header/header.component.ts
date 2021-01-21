@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { RouteState } from '../../models/route-state.model';
 import { RouteStateService } from '../../services/route-state.service';
 
@@ -10,7 +10,7 @@ import { RouteStateService } from '../../services/route-state.service';
 export class HeaderComponent implements OnInit {
 
   rotaAtual: RouteState = null;
-  
+  @Input() title: string;
   constructor(
     private routeStateService: RouteStateService) { }
 

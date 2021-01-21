@@ -1,5 +1,5 @@
 <ion-content>
-  <app-header></app-header>
+  <app-header title="Sala de Imprensa"></app-header>
   <ion-header collapse="condense" style="background-color: gray; color:white;">
     <ion-toolbar>
       <ion-title size="large">Sala de Imprensa</ion-title>
@@ -10,7 +10,8 @@
       <ion-row class="ion-align-items-center"> 
         <ion-col>
           <ion-card class="card-button"> 
-            <ion-item lines="none" (click)="goToNoticias()" style="cursor: pointer;">
+          <!--   <ion-item lines="none" (click)="goToNoticias()" style="cursor: pointer;"> -->
+            <ion-item lines="none" routerLink="news" style="cursor: pointer;">
                 <img src="assets/icon/Noticias.svg" class="card-button-img"> 
               <ion-label class="card-button-text">
                 Noticias

@@ -1,5 +1,5 @@
 <ion-content>    
-  <app-header></app-header>
+  <app-header title="Inicio"></app-header>
     <ion-grid style="padding-top:30px;">
       <ion-row > 
         <ion-col>
@@ -73,7 +73,8 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card (click)="goToLicitacoes()" class="card-button-right">
+     <!--      <ion-card (click)="goToLicitacoes()" class="card-button-right"> -->
+      <ion-card routerLink="/tabs/licitacoes" class="card-button-right">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/Licitacoes.svg">

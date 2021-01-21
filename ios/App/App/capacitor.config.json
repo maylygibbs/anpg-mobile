@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.anpg.app",
-  "appName": "ANPG APP",
+  "appId": "ao.co.anpg.ionic",
+  "appName": "ANPG App",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "dist/angular-anpg-mobile-app",
@@ -17,7 +17,11 @@
       "spinnerColor": "#999999",
       "showSpinner": true,
       "splashFullScreen": true,
-      "splashImmersive": true      
+      "splashImmersive": true
     }
-  }  
+  },
+  "server": {
+    "url": "http://localhost:8100",
+    "cleartext": true
+  }
 }

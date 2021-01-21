@@ -1,16 +1,17 @@
 ion-content {
-  --background: darkred url('../../../assets/img/angola2x.png') no-repeat center center / cover;
+  --background: darkred url("../../../assets/img/angola2x.png") no-repeat right
+    top;
 }
 ion-content ion-toolbar {
   --background: translucent;
 }
 
-.card-button-img{
+.card-button-img {
   margin-right: 10px;
   padding-right: 10px;
 }
 
-.card-button{
+.card-button {
   margin-left: 0px;
   padding: 0px;
   border-radius: 12px;
@@ -21,15 +22,16 @@ ion-content ion-toolbar {
 }
 
 .card-button-text {
-	font-family: FranklinGothic-Medium;														 
+  font-family: FranklinGothic-Medium;
 }
 
 .bottom-card-button-img {
   width: 30px;
   padding-left: 2px;
-  padding-right: 5px;;
+  padding-right: 5px;
 }
-ion-card, ion-item{  
+ion-card,
+ion-item {
   opacity: 0.8;
-  fill: rgba(224,225,227,1);
+  fill: rgba(224, 225, 227, 1);
 }
