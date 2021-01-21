@@ -69,13 +69,4 @@ export class PacotesdedadosPage implements OnInit {
           value: JSON.stringify(this.myFiles)
         }); */
       }
-    });
-
-    
-
-
-    this.fileOpener.open('path/to/file.pdf', 'application/pdf')
-    .then(() => console.log('File is opened'))
-    .catch(e => console.log('Error opening file', e));
-  }
 }
