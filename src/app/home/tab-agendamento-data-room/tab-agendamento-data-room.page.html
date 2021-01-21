@@ -1,9 +1,87 @@
 <ion-content>
   <app-header></app-header>
-  <div style="background-color: transparent;height:20px;">
-  </div>
 
-  <div style="padding: 10px;">
-  </div>
+  <div style="padding:30px;">
+    <ion-calendar [(ngModel)]="dateMulti"
+          (onChange)="onChange($event)"
+          (onClick)="onChange($event)"
+          [options]="optionsMulti"          
+          [type]="type"
+          [format]="'YYYY-MM-DD'"
+          style="border-radius: 10px;">
+    </ion-calendar>
 
+    <div style="padding-top: 5px;">
+      <ion-item style="border-radius: 10px;max-height:60px;" lines="none">
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input></ion-input>
+      </ion-item>      
+    </div>
+    
+    <div style="padding-top: 2px;">
+      <table style="width: 100%;">
+        <tr>
+          <td style="padding:3px">
+            <ion-item style="border-radius: 10px;max-height:60px;" lines="none">
+              <ion-label position="stacked">Empresa</ion-label>
+              <ion-input></ion-input>
+            </ion-item>      
+          </td>
+          <td style="padding:3px">
+            <ion-item style="border-radius: 10px;max-height:60px;" lines="none">
+              <ion-label position="stacked">Nº de Visitantes</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>            
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div style="padding-top: 2px;">
+      <ion-item style="border-radius: 10px;max-height:60px;" lines="none">
+        <ion-label position="stacked">E-mail</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>      
+    </div>
+
+    <div style="padding-top: 5px;">
+      <ion-item style="border-radius: 10px;max-height:60px;" lines="none">
+        <ion-label position="stacked">Área de interesse</ion-label>
+        <ion-input></ion-input>
+      </ion-item>      
+    </div>
+
+    <div style="padding-top: 5px;">
+      <ion-radio-group>
+      <table style="width:100%;border-radius: 10px;background-color: whitesmoke;opacity: 0.8;">
+        <tr>
+          <td>
+            <ion-item lines="none" style="border-radius: 10px;max-height:60px;">
+              <ion-radio mode="md" value="Ocupado"></ion-radio>
+              <ion-label>&nbsp;&nbsp;&nbsp;Ocupado</ion-label>
+            </ion-item>
+          </td>
+          <td>
+            <ion-item lines="none" style="border-radius: 10px;max-height:60px;">
+              <ion-radio mode="md" value="Disponível"></ion-radio>
+              <ion-label>&nbsp;&nbsp;&nbsp;Disponível</ion-label>
+            </ion-item>
+          </td>
+        </tr>
+      </table>
+      </ion-radio-group>
+    </div>
+
+    <div style="padding-top: 5px;">
+      <ion-button style="border-radius: 20px;">
+        <ion-label>Submeter</ion-label>        
+      </ion-button>      
+    </div>    
+
+  </div>
 </ion-content>
+
+<app-oil-sticker></app-oil-sticker>
+
+<div style="height:50px;">
+</div>

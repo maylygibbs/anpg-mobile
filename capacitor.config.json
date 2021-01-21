@@ -3,7 +3,7 @@
   "appName": "ANPG APP",
   "bundledWebRuntime": false,
   "npmClient": "npm",
-  "webDir": "www",
+  "webDir": "dist/angular-anpg-mobile-app",
   "cordova": {},
   "plugins": {
     "SplashScreen": {

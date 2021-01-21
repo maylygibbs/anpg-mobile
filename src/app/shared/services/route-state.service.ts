@@ -128,7 +128,7 @@ export class RouteStateService {
       }
     
       goToInformacoesJuridicas(): void {
-        this.add("Informações Jurídicas", "/tabs/tab-informacao-juridica/", null, false);    
+        this.add("Informações Jurídicas", "/tabs/informacao-juridica/", null, false);    
       }
     
       goToLicitacoes(): void {
@@ -140,7 +140,7 @@ export class RouteStateService {
       }
     
       goToAgendamentoDataRoom(): void {
-        this.add("Agendamento de Data Room", "/tabs/home/tab-agendamento-data-room/", null, false);    
+        this.add("Agendamento de Data Room", "/tabs/agendamento/", null, false);    
       }
     
       goToMapas(): void {
