@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { User } from '../../models/user';
 import { AuthenticationService } from '../../services';
@@ -8,6 +8,7 @@ import { RouteStateService } from '../../services/route-state.service';
   selector: 'app-menu-utilizador',
   templateUrl: './menu-utilizador.component.html',
   styleUrls: ['./menu-utilizador.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuUtilizadorComponent {
 

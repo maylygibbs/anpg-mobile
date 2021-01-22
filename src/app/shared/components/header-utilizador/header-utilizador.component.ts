@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RouteState } from '../../models/route-state.model';
 import { RouteStateService } from '../../services/route-state.service';
 
@@ -6,6 +6,7 @@ import { RouteStateService } from '../../services/route-state.service';
   selector: 'app-header-utilizador',
   templateUrl: './header-utilizador.component.html',
   styleUrls: ['./header-utilizador.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderUtilizadorComponent implements OnInit {
 

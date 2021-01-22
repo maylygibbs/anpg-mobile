@@ -1,11 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { RouteStateService } from '../../services/route-state.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss' ]
+  styleUrls: ['./menu.component.scss' ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuComponent {
 
