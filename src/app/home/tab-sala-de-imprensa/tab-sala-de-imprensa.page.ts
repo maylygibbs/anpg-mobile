@@ -1,10 +1,11 @@
-import { Component, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
 import { RouteStateService } from '../../shared/services/route-state.service';
 
 @Component({
   selector: 'app-tab-sala-de-imprensa',
   templateUrl: 'tab-sala-de-imprensa.page.html',
-  styleUrls: ['tab-sala-de-imprensa.page.scss']
+  styleUrls: ['tab-sala-de-imprensa.page.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TabSalaDeImprensa {
   

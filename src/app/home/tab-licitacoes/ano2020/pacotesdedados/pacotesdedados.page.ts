@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 import { Plugins, FilesystemDirectory } from '@capacitor/core';
 import { HttpClient, HttpEventType, HttpHeaders } from '@angular/common/http';
@@ -10,6 +10,7 @@ const { Filesystem, Storage } = Plugins;
   selector: 'app-pacotesdedados',
   templateUrl: './pacotesdedados.page.html',
   styleUrls: ['./pacotesdedados.page.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PacotesdedadosPage implements OnInit {
 
