@@ -31,6 +31,11 @@
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
               },
+              {
+                "glob": "**/*.svg",
+                "input": "src/svg",
+                "output": "svg"
+              },
               "src/web.config",
               "src/routes.json"
             ],
@@ -123,7 +128,14 @@
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "/assets"
-              }
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "src/svg",
+                "output": "svg"
+              },
+              "src/web.config",
+              "src/routes.json"
             ]
           },
           "configurations": {

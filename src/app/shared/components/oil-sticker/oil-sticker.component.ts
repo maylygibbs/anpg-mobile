@@ -21,16 +21,26 @@ export class OilStickerComponent implements OnInit {
     this.getPrice();
   }
 
-  getPrice(): void {    
-    this.oilPriceService.getLatestAPI().subscribe(x => {
-      this.brentOil = x['data'];
+  getPrice(): void {
+    this.oilPrice$ = this.oilPriceService.getLatestPrices();
+    /*
+    try {
+      this.oilPriceService.getLatestAPI().subscribe(x => {
+        if (x) {
+          this.brentOil = x['data'];
+          this.oilPrice$ = this.oilPriceService.getLatestPrices();
+          this.oilPrice$.forEach(element => {    
+            element.forEach(x => {
+              if (x['code'] = 'BRENT_CRUDE_USD') {
+                x['formatted'] = this.brentOil.formatted;
+              }})
+          });
+        }
+      });
+    }
+    catch(error) {
       this.oilPrice$ = this.oilPriceService.getLatestPrices();
-      this.oilPrice$.forEach(element => {    
-        element.forEach(x => {
-          if (x['code'] = 'BRENT_CRUDE_USD') {
-            x['formatted'] = this.brentOil.formatted;
-          }})
-      });    
-    });
+    }
+    */
   } 
 }

@@ -1,5 +1,5 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule }      from '@angular/common';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -15,7 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -25,11 +24,15 @@ import { FilePath } from '@ionic-native/file-path/ngx';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-    CommonModule],
+    CommonModule,
+  ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },FileOpener,FilePath],
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    FileOpener,
+    FilePath
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

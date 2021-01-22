@@ -22,6 +22,7 @@
     "@capacitor/android": "^2.4.6",
     "@capacitor/core": "^2.4.6",
     "@capacitor/ios": "^2.4.6",
+    "@ionic-native/calendar": "^5.30.0",
     "@ionic-native/core": "^5.30.0",
     "@ionic-native/file-opener": "^5.30.0",
     "@ionic-native/file-path": "^5.30.0",
@@ -34,7 +35,10 @@
     "cordova-plugin-splashscreen": "^6.0.0",
     "cordova-plugin-statusbar": "^2.4.3",
     "core-js": "^3.6.5",
+    "ion2-calendar": "^3.0.0-rc.0",
     "ionic-swiper": "^0.3.2",
+    "ionic2-calendar": "^0.6.6",
+    "moment": "^2.29.1",
     "rxjs": "^6.5.5",
     "tslib": "^1.11.1",
     "zone.js": "^0.10.3"

@@ -119,36 +119,36 @@ export class RouteStateService {
       }
     
       goToMapaInteractivo(): void {
-        this.add("Mapa Interactivo", "/tabs/home/tab-interactive-map/", null, false);
+        this.add("Mapa Interactivo", "/tabs/mapa-interactivo/", null, false);
         //this.add("Mapa Interactivo", "/tabs/tab3", null, false);
       }
     
       goToDadosEap(): void {
-        this.add("Dados E&P", "/tabs/home/tab-dados-eap/", null, false);    
+        this.add("Dados E&P", "/tabs/dados-eap/", null, false);    
       }
     
       goToInformacoesJuridicas(): void {
-        this.add("Informações Jurídicas", "/tabs/tab-informacao-juridica/", null, false);    
+        this.add("Informações Jurídicas", "/tabs/informacao-juridica/", null, false);    
       }
     
       goToLicitacoes(): void {
-        this.add("Licitações", "/tabs/home/tab-licitacoes/", null, false);    
+        this.add("Licitações", "/tabs/licitacoes/", null, false);    
       }
     
       goToSobreNos(): void {
-        this.add("Sobre Nós", "/tabs/home/sobrenos/", null, false);    
+        this.add("Sobre Nós", "/tabs/sobrenos/", null, false);    
       }
     
       goToAgendamentoDataRoom(): void {
-        this.add("Agendamento de Data Room", "/tabs/home/tab-agendamento-data-room/", null, false);    
+        this.add("Agendamento de Data Room", "/tabs/agendamento/", null, false);    
       }
     
       goToMapas(): void {
-        this.add("Mapas", "/tabs/home/tab-maps/", null, false);    
+        this.add("Mapas", "/tabs/mapas/", null, false);    
       }
     
       goToFAQs(): void {
-        this.add("FAQs", "/tabs/home/tab-faq/", null, false);    
+        this.add("FAQs", "/tabs/faq/", null, false);    
       }    
 
 }

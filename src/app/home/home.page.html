@@ -3,8 +3,8 @@
     <ion-grid style="padding-top:30px;">
       <ion-row > 
         <ion-col>
-          <ion-card class="card-button-top"> 
-            <ion-item lines="none" (click)="goToMapaInteractivo()">
+          <ion-card (click)="goToMapaInteractivo()" class="card-button-top" style="cursor: pointer;"> 
+            <ion-item lines="none">
              <!--  <ion-thumbnail slot="start"> -->
                 <img src="assets/icon/MapaInterativo.svg" class="card-button-interactivo-img"> 
               <!-- </ion-thumbnail> -->
@@ -16,8 +16,7 @@
         </ion-col>    
       </ion-row>
       
-      <ion-row class="ion-align-self-center">
-        
+      <ion-row class="ion-align-self-center">        
         <ion-col size="6">
           <ion-card (click)="toToSalaDeImprensa()" class="card-button-left" style="cursor: pointer;">
             <ion-row class="ion-align-self-center"> 
@@ -36,7 +35,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card (click)="goToDadosEap()" class="card-button-right">
+          <ion-card (click)="goToDadosEap()" class="card-button-right" style="cursor: pointer;">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/DadosEP.svg">
@@ -56,7 +55,7 @@
       <ion-row class="ion-align-self-center">
         
         <ion-col size="6">
-          <ion-card (click)="goToInformacoesJuridicas()" class="card-button-left">
+          <ion-card (click)="goToInformacoesJuridicas()" class="card-button-left" style="cursor: pointer;">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/InformacaoJuridica.svg">
@@ -72,9 +71,8 @@
           </ion-card> 
         </ion-col>
         
-        <ion-col size="6"> 
-     <!--      <ion-card (click)="goToLicitacoes()" class="card-button-right"> -->
-      <ion-card routerLink="/tabs/licitacoes" class="card-button-right">
+      <ion-col size="6"> 
+      <ion-card (click)="goToLicitacoes()" class="card-button-right" style="cursor: pointer;">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/Licitacoes.svg">
@@ -94,7 +92,7 @@
       <ion-row class="ion-align-self-center">
         
         <ion-col size="6">
-          <ion-card (click)="goToSobreNos()" class="card-button-left">
+          <ion-card (click)="goToSobreNos()" class="card-button-left" style="cursor: pointer;">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/SobreNos.svg">
@@ -111,7 +109,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card (click)="goToAgendamentoDataRoom()" class="card-button-right">
+          <ion-card (click)="goToAgendamentoDataRoom()" class="card-button-right" style="cursor: pointer;">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/AgendamentoVDR.svg">
@@ -148,7 +146,7 @@
         </ion-col> -->
 
         <ion-col size="6">
-          <ion-card (click)="goToMapas()" class="card-button-left">
+          <ion-card (click)="goToMapas()" class="card-button-left" style="cursor: pointer;">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/MapaInterativo.svg">
@@ -165,7 +163,7 @@
         </ion-col>
         
         <ion-col size="6"> 
-          <ion-card (click)="goToFAQs()" class="card-button-right">
+          <ion-card (click)="goToFAQs()" class="card-button-right" style="cursor: pointer;">
             <ion-row class="ion-align-self-center"> 
               <ion-item lines="none" class="center-image card-button-int">
                 <img src="assets/icon/Faqs.svg">
