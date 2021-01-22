@@ -1,9 +1,10 @@
-import { Component, AfterViewInit, Input, ViewChild,  ElementRef, Renderer2, HostListener } from "@angular/core";
+import { Component, AfterViewInit, Input, ViewChild,  ElementRef, Renderer2, HostListener, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
   selector: 'app-expandable',
   templateUrl: './expandable.component.html',
   styleUrls: ['./expandable.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExpandableComponent implements AfterViewInit  {
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { IOilPrice } from '../../interfaces/ioil-price.interface';
 import { OilPriceService } from '../../services/oil-price.service';
@@ -7,6 +7,7 @@ import { OilPriceService } from '../../services/oil-price.service';
   selector: 'app-oil-sticker',
   templateUrl: './oil-sticker.component.html',
   styleUrls: ['./oil-sticker.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OilStickerComponent implements OnInit {
 
