@@ -1,10 +1,8 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { InitNotifierService } from './shared/services/init-notifier.service';
-
 
 @Component({
   selector: 'app-root',
