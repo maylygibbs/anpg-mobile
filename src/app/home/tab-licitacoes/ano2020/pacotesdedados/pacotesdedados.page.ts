@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Plugins, FilesystemDirectory } from '@capacitor/core';
-import { HttpClient, HttpEventType } from '@angular/common/http';
+import { HttpClient, HttpEventType, HttpHeaders } from '@angular/common/http';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 const { Filesystem, Storage } = Plugins;
 
@@ -32,7 +32,20 @@ export class PacotesdedadosPage implements OnInit {
     window.open("https://anpg.co.ao/wp-content/uploads/2021/01/Data_pack_CON_CONTENT_LIST.pdf", '_system');
   } */
   OpenKwanzaPDF(){
-    this.http.get(this.kwanzaPDF, {
+/* 
+    const httpOptions = {
+      responseType:'blob',
+      observe: 'events',
+      headers: new HttpHeaders(
+        { 
+          'Access-Control-Allow-Origin': '*'
+        })
+    };   */
+
+
+   /*  const proxyurl = "https://cors-anywhere.herokuapp.com/"; // para evitar o erro de CORS
+
+    this.http.get(proxyurl+this.kwanzaPDF, {
       responseType:'blob',
       observe: 'events'
     }).subscribe(async event =>{
@@ -47,21 +60,15 @@ export class PacotesdedadosPage implements OnInit {
         });
 
         const path = savedFile.uri;
-
+        console.log(path);
         this.fileOpener.open(path,'application/pdf').then(()=> console.log('Abriu')).catch(error=>console.log('Nao abriu ',error));
-
+ */
+console.log("Tentar usar o fileopener para abrir o podf");
+    this.fileOpener.open('/assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
+    this.fileOpener.open('assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu sem /')).catch(error=>console.log('Nao abriu em /',error));
         /* Storage.set({
           key: FILE_KEY,
           value: JSON.stringify(this.myFiles)
         }); */
       }
-    });
-
-    
-
-
-    this.fileOpener.open('path/to/file.pdf', 'application/pdf')
-    .then(() => console.log('File is opened'))
-    .catch(e => console.log('Error opening file', e));
-  }
 }
