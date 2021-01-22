@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { FileOpener } from '@ionic-native/file-opener/ngx';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },FileOpener],
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },FileOpener,FilePath],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
