@@ -63,7 +63,9 @@ export class PacotesdedadosPage implements OnInit {
         console.log(path);
         this.fileOpener.open(path,'application/pdf').then(()=> console.log('Abriu')).catch(error=>console.log('Nao abriu ',error));
  */
-    this.fileOpener.open('/assets/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu')).catch(error=>console.log('Nao abriu ',error));
+console.log("Tentar usar o fileopener para abrir o podf");
+    this.fileOpener.open('/assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
+    this.fileOpener.open('assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu sem /')).catch(error=>console.log('Nao abriu em /',error));
         /* Storage.set({
           key: FILE_KEY,
           value: JSON.stringify(this.myFiles)
