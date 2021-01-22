@@ -67,18 +67,24 @@ export class PacotesdedadosPage implements OnInit {
 console.log("Tentar usar o filePath");
 
 this.filePath.resolveNativePath('/assets')
-  .then(filePath => console.log(filePath))
+  .then(filePath => () => {
+    console.log(filePath);
+    this.fileOpener.open(filePath+'/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
+  })
   .catch(err => console.log(err));
-console.log("Tentar usar o fileopener para abrir o pdf");
+/*console.log("Tentar usar o fileopener para abrir o pdf");
 this.fileOpener.open(this.filePath+'/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
-
+*/
 console.log("Tentar usar o filePath v2");
 this.filePath.resolveNativePath('assets')
-  .then(filePath => console.log(filePath))
+.then(filePath => () => {
+  console.log(filePath);
+  this.fileOpener.open(filePath+'/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
+})
   .catch(err => console.log(err));
-console.log("Tentar usar o fileopener para abrir o pdf v2");
+/*console.log("Tentar usar o fileopener para abrir o pdf v2");
 this.fileOpener.open(this.filePath+'/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abri sem /')).catch(error=>console.log('Nao abriu sem /',error));
-
+*/
 /* this.fileOpener.open('/assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
 this.fileOpener.open('assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu sem /')).catch(error=>console.log('Nao abriu sem /',error));
  */        /* Storage.set({
