@@ -14,9 +14,6 @@ import { IOilPriceRequest } from '../interfaces/ioil-price-request.interface';
 })
 export class OilPriceService {
 
-  constructor(private http: HttpClient) { 
-  }
-
   OilPrices: OilPrice[] = [
     {
       label: 'Petróleo Brent',
@@ -33,7 +30,7 @@ export class OilPriceService {
       price: 56.73,
       formatted: '56.73$',
       currency: '$',
-      code: 'WTI_CRUDE_USD',
+      code: 'WTI_USD',
       type: '',
       created_at: '',
       img: 'assets/icon/TickerWITI.svg'
@@ -50,19 +47,17 @@ export class OilPriceService {
     }    
   ];
 
-  getLatestPrices(): Observable<OilPrice[]> {
-    return of(this.OilPrices);    
+  constructor(private http: HttpClient) { 
   }
 
-  getLatestAPI(): Observable<IOilPrice[]> {
+  getLatestPrices(): Observable<OilPrice[]> {
     const httpOptions = {
       headers: new HttpHeaders(
         { 
-          'Authorization': `Token ${environment.oilPriceApiToken}`,
           'Access-Control-Allow-Origin': '*'
         })
     };    
-    const req = this.http.get<any>("https://api.oilpriceapi.com/v1/prices/latest", httpOptions);
-    return req;
+    return this.http.get<OilPrice[]>("https://anpgwebapi.azurewebsites.net/api/OilPrices");
+    /*return of(this.OilPrices);*/
   }
 }
