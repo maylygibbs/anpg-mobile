@@ -1,20 +1,24 @@
 import { INews } from "../interfaces/inews.interface";
 
 export class News implements INews {
+
     id: number;
-    expanded: boolean;
-    title: string;
+    titulo: string;
     img: string;
+    imgMedium: string;
+    imgFull: string;
     sector: string;
-    text: string;
+    texto: string;
+    data: string;
 
     constructor() {
             this.id = 0;
-            this.expanded = false;
-            this.title = '';
+            this.titulo = '';
             this.img = '';
+            this.imgMedium = '';
+            this.imgFull = '';
             this.sector = '';
-            this.text = '';
+            this.texto = '';
                 
     }
 }

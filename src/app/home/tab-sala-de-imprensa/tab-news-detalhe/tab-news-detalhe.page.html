@@ -7,14 +7,14 @@
   </ion-header> -->
 
   <div>
-    <img [src]="noticia$.img" style="width:100%">
+    <img [src]="noticia$.imgMedium" style="width:100%">
   </div>
   <div>
       <div style="padding:10px;">
         <span class="news-detalhe-sector"><b>{{ noticia$.sector }}</b></span>
-        <h4 class="news-detalhe-title"><b>{{ noticia$.title }}</b></h4>
+        <h4 class="news-detalhe-title"><b>{{ noticia$.titulo }}</b></h4>
         <hr>
-        <div class="news-detalhe-text" [innerHTML]="noticia$.text"></div>
+        <div class="news-detalhe-text" [innerHTML]="noticia$.texto"></div>
       </div>
   </div>
 </ion-content>
