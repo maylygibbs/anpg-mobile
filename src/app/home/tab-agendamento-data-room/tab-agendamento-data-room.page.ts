@@ -35,7 +35,7 @@ export class TabAgendamentoDataRoom {
     to: 0
   };
     
-  constructor(private agendamentoService: AgendamentoService) { 
+  constructor(private agendamentoService: AgendamentoService, public alertController: AlertController) { 
     this.errorMessage = '';
     this.successMessage = '';
   }
@@ -43,6 +43,29 @@ export class TabAgendamentoDataRoom {
   onChange($event) {
     console.log($event);
     console.log(this.date);
+  }
+  
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Alerta',
+      subHeader: 'Erro de validação',
+      message: 'Por favor preencha os campos em falta.',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+  async presentSucess() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Sucesso',
+      subHeader: 'Pedido enviado',
+      message: 'Pedido de agendamento enviado com sucesso!',
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
 
   submeter(): any {
@@ -56,20 +79,28 @@ export class TabAgendamentoDataRoom {
     };
     console.log(agendamento);
     if (!this.date || !this.nome || !this.empresa || !this.qtdeVisitantes || !this.email || !this.areaInteresse) {
-      this.errorMessage = 'Existem campos não preenchidos.';
-      this.successMessage = '';
+      //this.errorMessage = 'Por favor preencha os campos em falta.';
+      //this.successMessage = '';
+      this.presentAlert();
       return null;
     } else {         
       this.errorMessage = '';
       this.successMessage = '';
       const req = this.agendamentoService.gravarAgendamento(agendamento)
       if (!req) {
-        this.errorMessage = 'Falha ao gravar';
+        this.errorMessage = 'Erro ao gravar.';
         this.successMessage = '';
         return null;
       } else {
+        this.date="";
+        this.nome="";
+        this.empresa="";
+        this.qtdeVisitantes=0;
+        this.email="";
+        this.areaInteresse="";
         this.errorMessage = '';
-        this.successMessage = 'Solicitação enviada';
+        //this.successMessage = 'Agendamento enviado com sucesso!';
+        this.presentSucess();
         return req;
       }
     }

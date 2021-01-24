@@ -10,12 +10,30 @@ ion-calendar,
 ion-list,
 ion-grid,
 ion-row {
-  --background: whitesmoke;  
+  --background: whitesmoke;
   opacity: 0.8;
-}  
+}
+
+.round {
+  --padding-start: 30px;
+  --padding-end: 30px;
+}
+
+.lbl-round {
+  padding-left: 30px;
+  padding-right: 30px;
+  background: whitesmoke;
+  border-radius: 30px;
+  font-size: 12px;
+  opacity: 1;
+  --min-height: 50px !important;
+  --max-height: 50px !important;
+  max-height: 50px;
+  height: 50px;
+}
 
 ::ng-deep div.days {
-  height: 20px!important;
+  height: 20px !important;
 }
 
 item-native {
@@ -26,10 +44,10 @@ item-native {
   background-color: darkred;
 }
 
-.primary .days .on-selected, 
+.primary .days .on-selected,
 .primary .startSelection button.days-btn,
 .primary .endSelection button.days-btn {
-  background-color: darkred!important;
+  background-color: darkred !important;
 }
 
 .label-stacked.sc-ion-label-ios-h {

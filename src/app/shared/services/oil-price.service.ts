@@ -13,7 +13,14 @@ export class OilPriceService {
   }
 
   getLatestPrices(): Observable<OilPrice[]> {
+    const httpOptions = {
+      headers: new HttpHeaders(
+        { 
+          'Authorization': `Token ${environment.oilPriceApiToken}`
+          //, 'Access-Control-Allow-Origin': '*'
+        })
+    };    
     const urlService = environment.apiUrl + "OilPrices";
-    return this.http.get<OilPrice[]>(urlService);
+    return this.http.get<OilPrice[]>(urlService, httpOptions);
   }
 }

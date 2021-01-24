@@ -11,10 +11,12 @@ export class AgendamentoService {
   constructor(private http: HttpClient) { }
 
    gravarAgendamento(agendamento: IAgendamento): any {
+
     const httpOptions = {
       headers: new HttpHeaders(
-        {          
-          'Access-Control-Allow-Origin': '*'
+        { 
+          'Authorization': `Token ${environment.oilPriceApiToken}`
+          //, 'Access-Control-Allow-Origin': '*'
         })
     };
     const req = this.http.post( environment.apiUrl + "Agenda", agendamento, httpOptions);
