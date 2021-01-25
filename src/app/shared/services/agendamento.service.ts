@@ -1,30 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { INews } from '../interfaces/inews.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { IAgendamento } from '../interfaces/iagendamento.interface';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class NewsService {
-
-  itemHeight: number = 0;
-
+export class AgendamentoService {
+  
   constructor(private http: HttpClient) { }
 
-  getAllNews(): Observable<INews[]> {
-
+   gravarAgendamento(agendamento: IAgendamento): any {
 
     const httpOptions = {
       headers: new HttpHeaders(
         { 
           'Authorization': `Token ${environment.oilPriceApiToken}`
+          //, 'Access-Control-Allow-Origin': '*'
         })
-    };    
-    const urlService = environment.apiUrl + "Noticias";
-    return this.http.get<INews[]>(urlService, httpOptions);
+    };
+    const req = this.http.post( environment.apiUrl + "Agenda", agendamento, httpOptions);
+    return req;
+   }
 
-//    return of(this.newsItems);
-  }
 }

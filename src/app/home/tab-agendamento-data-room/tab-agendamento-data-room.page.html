@@ -1,86 +1,101 @@
 <ion-content>
-  <app-header title="Agendamento de Data Room"></app-header>
-  <div style="padding: 10px;">  
-    <ion-calendar [(ngModel)]="dateMulti"
+  <app-header title="Agendamento Data Room"></app-header>
+  <div style="padding: 20px;">  
+    <ion-calendar [(ngModel)]="date"
           (onChange)="onChange($event)"
           (onClick)="onChange($event)"
-          [options]="optionsMulti"          
+          [options]="calendarOptions"          
           [type]="type"
-          [format]="'YYYY-MM-DD'"
+          [format]="'YYYY-MM-DD'"          
           style="border-radius: 10px;">
     </ion-calendar>
 
     <div style="padding-top: 5px;">
-      <ion-item style="border-radius: 10px;max-height:60px;" lines="none">
+      <ion-item style="border-radius: 10px;max-height:50px;font-size: 12px;" lines="none">
         <ion-label position="stacked">Nome</ion-label>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="nome"></ion-input>
       </ion-item>      
     </div>
     
-    <div style="padding-top: 2px;">
+    <div style="padding-top: 5px;">
       <table style="width: 100%;">
         <tr>
-          <td style="padding:3px">
-            <ion-item style="border-radius: 10px;max-height:60px;" lines="none">
+          <td style="padding-right:3px">
+            <ion-item style="border-radius: 10px;max-height:50px;font-size: 12px;" lines="none">
               <ion-label position="stacked">Empresa</ion-label>
-              <ion-input></ion-input>
+              <ion-input [(ngModel)]="empresa"></ion-input>
             </ion-item>      
           </td>
-          <td style="padding:3px">
-            <ion-item style="border-radius: 10px;max-height:60px;" lines="none">
-              <ion-label position="stacked">N� de Visitantes</ion-label>
-              <ion-input type="number"></ion-input>
+          <td>
+            <ion-item style="border-radius: 10px;max-height:50px;font-size: 12px;" lines="none">
+              <ion-label position="stacked">Nº de Visitantes</ion-label>
+              <ion-input type="number" [(ngModel)]="qtdeVisitantes"></ion-input>
             </ion-item>            
           </td>
         </tr>
       </table>
     </div>
 
-    <div style="padding-top: 2px;">
-      <ion-item style="border-radius: 10px;max-height:60px;" lines="none">
+    <div style="padding-top: 5px;">
+      <ion-item style="border-radius: 10px;max-height:50px;font-size: 12px;" lines="none">
         <ion-label position="stacked">E-mail</ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
       </ion-item>      
     </div>
 
     <div style="padding-top: 5px;">
-      <ion-item style="border-radius: 10px;max-height:60px;" lines="none">
-        <ion-label position="stacked">�rea de interesse</ion-label>
-        <ion-input></ion-input>
+      <ion-item style="border-radius: 10px;max-height:50px;font-size: 12px;" lines="none">
+        <ion-label position="stacked">&Aacute;rea de interesse</ion-label>
+        <ion-input [(ngModel)]="areaInteresse"></ion-input>
       </ion-item>      
     </div>
 
     <div style="padding-top: 5px;">
-      <ion-radio-group>
-      <table style="width:100%;border-radius: 10px;background-color: whitesmoke;opacity: 0.8;">
-        <tr>
-          <td>
-            <ion-item lines="none" style="border-radius: 10px;max-height:60px;">
-              <ion-radio mode="md" value="Ocupado"></ion-radio>
-              <ion-label>&nbsp;&nbsp;&nbsp;Ocupado</ion-label>
-            </ion-item>
-          </td>
-          <td>
-            <ion-item lines="none" style="border-radius: 10px;max-height:60px;">
-              <ion-radio mode="md" value="Disponível"></ion-radio>
-              <ion-label>&nbsp;&nbsp;&nbsp;Disponível</ion-label>
-            </ion-item>
-          </td>
-        </tr>
-      </table>
-      </ion-radio-group>
-    </div>
-
-    <div style="padding-top: 5px;">
-      <ion-button style="border-radius: 20px;">
-        <ion-label>Submeter</ion-label>        
-      </ion-button>      
-    </div>    
-
+      <table style="width: 100%;">
+      <tr>
+        <td>
+          <ion-button size="small" class="round" color="light" (click)="submeter()">
+            <ion-label style="font-size: 12px;">Submeter</ion-label>
+          </ion-button>
+        </td>
+        <td style="padding-top: 3px;">
+          <!--ion-item lines="none" style="border-radius: 30px;font-size: 12px;opacity:1;height: 30px;">
+            <ion-icon name="ellipse" [style.color]="'#EF3B51'" ></ion-icon> <span style="padding-right: 10px;"> Ocupado</span>
+            <ion-icon name="ellipse-outline"></ion-icon> <span> Dispon&iacute;vel</span>
+          </ion-item-->
+          <ion-label class="lbl-round">
+            <ion-icon name="ellipse" [style.color]="'#EF3B51'"></ion-icon> Ocupado
+            <ion-icon name="ellipse-outline"></ion-icon> Dispon&iacute;vel
+          </ion-label>
+        </td>
+      </tr>
+    </table>
   </div>
+
+    <ng-container *ngIf='errorMessage && errorMessage != ""'>
+      <div style="padding-top: 5px;">
+        <ion-item lines="none" style="border-radius: 10px;">        
+          <ion-label style="font-weight: 600;color:red;">
+            {{ errorMessage }}
+          </ion-label>          
+        </ion-item>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf='successMessage && successMessage != ""'>
+      <div style="padding-top: 5px;">
+        <ion-item lines="none" style="border-radius: 10px;">        
+          <ion-label style="font-weight: 600;color:green;">
+            {{ successMessage }}
+          </ion-label>
+        </ion-item>
+      </div>
+    </ng-container>
+  </div>
+
+  <div style="height:50px;">
+  </div>
+  
 </ion-content>
 
 <app-oil-sticker></app-oil-sticker>
-
-<div style="height:50px;">
-</div>

@@ -1,8 +1,10 @@
 export interface INews {
     id: number,
-    expanded: boolean,
-    title: string,
+    titulo: string,
     img: string,
+    imgMedium: string,
+    imgFull: string,
     sector: string,
-    text: string,
+    texto: string,
+    data: string,
 }

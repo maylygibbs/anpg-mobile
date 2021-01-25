@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-tab-splash',
   templateUrl: 'tab-splash.page.html',
-  styleUrls: ['tab-splash.page.scss']
+  styleUrls: ['tab-splash.page.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TabSplash {
 

@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: '',
-  oilPriceApiToken: '62ea1c3b053b3f170764aec1e0ecb43e',
+  apiUrl: 'https://anpgwebapi.azurewebsites.net/api/',
+  oilPriceApiToken: '17bc09ee0e73192cda29208e27996dea',
 };
 
 /*
