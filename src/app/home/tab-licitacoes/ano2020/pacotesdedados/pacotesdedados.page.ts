@@ -4,6 +4,7 @@ import { Plugins, FilesystemDirectory } from '@capacitor/core';
 import { HttpClient, HttpEventType, HttpHeaders } from '@angular/common/http';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
+import { File } from '@ionic-native/file/ngx';
 const { Filesystem, Storage } = Plugins;
 
 @Component({
@@ -24,7 +25,7 @@ export class PacotesdedadosPage implements OnInit {
     reader.readAsDataURL(blob);
   });
   
-  constructor(private http:HttpClient, private fileOpener: FileOpener,private filePath: FilePath) { }
+  constructor(private http:HttpClient, private fileOpener: FileOpener/*,private filePath: FilePath*/,private file: File) { }
 
   ngOnInit() {
   }
@@ -64,32 +65,44 @@ export class PacotesdedadosPage implements OnInit {
         console.log(path);
         this.fileOpener.open(path,'application/pdf').then(()=> console.log('Abriu')).catch(error=>console.log('Nao abriu ',error));
  */
-console.log("Tentar usar o filePath");
+/* console.log("Tentar usar o filePath");
 
 this.filePath.resolveNativePath('/assets')
   .then(filePath => () => {
     console.log(filePath);
     this.fileOpener.open(filePath+'/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
   })
-  .catch(err => console.log(err));
-/*console.log("Tentar usar o fileopener para abrir o pdf");
-this.fileOpener.open(this.filePath+'/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
-*/
-console.log("Tentar usar o filePath v2");
+  .catch(err => console.log(err)); */
+console.log("Tentar usar o fileopener para abrir o pdf");
+this.fileOpener.open(this.file.applicationDirectory+'assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
+
+/* console.log("Tentar usar o filePath v2");
 this.filePath.resolveNativePath('assets')
 .then(filePath => () => {
   console.log(filePath);
   this.fileOpener.open(filePath+'/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
-})
-  .catch(err => console.log(err));
-/*console.log("Tentar usar o fileopener para abrir o pdf v2");
-this.fileOpener.open(this.filePath+'/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abri sem /')).catch(error=>console.log('Nao abriu sem /',error));
-*/
+}) 
+  .catch(err => console.log(err));*/
+console.log("Tentar usar o fileopener para abrir o pdf v2");
+this.fileOpener.open(this.file.applicationDirectory+'/assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abri sem /')).catch(error=>console.log('Nao abriu sem /',error));
+
 /* this.fileOpener.open('/assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu com /')).catch(error=>console.log('Nao abriu com /',error));
 this.fileOpener.open('assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pdf').then(()=> console.log('Abriu sem /')).catch(error=>console.log('Nao abriu sem /',error));
  */        /* Storage.set({
           key: FILE_KEY,
           value: JSON.stringify(this.myFiles)
         }); */
+        console.log("Tentar usar o fileopener para abrir o pdf v3");
+        this.file.copyFile(this.file.applicationDirectory + 'www/assets/pdf/', "Data_pack_CON_CONTENT_LIST.pdf", this.file.externalCacheDirectory, "Data_pack_CON_CONTENT_LIST.pdf")
+        .then( _ => {
+            this.fileOpener.open(this.file.externalCacheDirectory + "Data_pack_CON_CONTENT_LIST.pdf", 'application/pdf')
+            .then( _ => {
+                console.log('File opened');
+            })
+            .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
+         })
+         .catch( e => {
+            console.log("Error copying file: " + JSON.stringify(e));
+         });
       }
 }
