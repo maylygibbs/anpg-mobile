@@ -11,9 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { SharedModule } from 'src/app/shared/shared.module';
-import { HttpClientModule } from '@angular/common/http';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
-import { FilePath } from '@ionic-native/file-path/ngx';
 import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
@@ -23,7 +21,6 @@ import { File } from '@ionic-native/file/ngx';
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
-    HttpClientModule,
     SharedModule,
     CommonModule,
   ],
@@ -32,7 +29,6 @@ import { File } from '@ionic-native/file/ngx';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     FileOpener,
-    FilePath,
     File
   ],
   bootstrap: [AppComponent],

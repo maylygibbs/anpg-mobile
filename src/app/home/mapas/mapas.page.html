@@ -1,6 +1,6 @@
 <ion-content>
   <app-header title="Mapas"></app-header>
-  <ion-row style="padding-top: 40px;" routerLink="/tabs/mapas/mapa1">
+  <ion-row style="padding-top: 40px;" (click)="OpenMapa1PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
       MAPA LICITAÇÃO 2020
@@ -10,7 +10,7 @@
     </ion-col>
   </ion-row>
   
-  <ion-row routerLink="/tabs/mapas/mapa2" >
+  <ion-row (click)="OpenMapa2PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
         MAPA DE POÇOS E SISMICA DO CONGO ONSHORE – LICITAÇÃO 2020
@@ -20,7 +20,7 @@
     </ion-col>
   </ion-row>
   
-  <ion-row routerLink="/tabs/mapas/mapa3" >
+  <ion-row (click)="OpenMapa3PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
         MAPA DE POÇOS E SISMICA DO KWANZA ONSHORE – LICITAÇÃO 2020
@@ -30,7 +30,7 @@
     </ion-col>
   </ion-row>
   
-  <ion-row routerLink="/tabs/mapas/mapa4" >
+  <ion-row (click)="OpenMapa4PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
         MAPA DE CONCESSÕES
@@ -40,7 +40,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row routerLink="/tabs/mapas/mapa5" >
+  <ion-row (click)="OpenMapa5PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
         COMPANHIAS DE PETRÓLEO
@@ -50,7 +50,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row routerLink="/tabs/mapas/mapa6" >
+  <ion-row (click)="OpenMapa6PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
         COMPARATIVE BASIN STRATIGRAPHY CONGO
@@ -60,7 +60,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row routerLink="/tabs/mapas/mapa7" >
+  <ion-row (click)="OpenMapa7PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
         HISTÓRICO DE PRODUÇÃO
@@ -70,7 +70,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row routerLink="/tabs/mapas/mapa8" >
+  <ion-row (click)="OpenMapa8PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
         PROGRAMA LICITAÇÃO 2019-2025
@@ -80,7 +80,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row routerLink="/tabs/mapas/mapa9" >
+  <ion-row (click)="OpenMapa9PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
         MAPA DE SÍSMICA 2D
@@ -90,7 +90,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row routerLink="/tabs/mapas/mapa10" >
+  <ion-row (click)="OpenMapa10PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
         MAPA DE SÍSMICA 3D
@@ -100,7 +100,7 @@
     </ion-col>
   </ion-row>
 
-  <ion-row routerLink="/tabs/mapas/mapa11" >
+  <ion-row (click)="OpenMapa11PDF()" expand="full">
     <ion-col >
       <ion-item lines="full"><ion-label class="ion-text-wrap pacote-header">
         MAPA GERAL DO NAMIBE

@@ -7,14 +7,6 @@ const routes: Routes = [
   {
     path: '',
     component: PacotesdedadosPage
-  },
-  {
-    path: 'congo',
-    loadChildren: () => import('./congo/congo.module').then( m => m.CongoPageModule)
-  },
-  {
-    path: 'kwanza',
-    loadChildren: () => import('./kwanza/kwanza.module').then( m => m.KwanzaPageModule)
   }
 ];
 
