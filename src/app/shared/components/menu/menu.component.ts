@@ -41,15 +41,15 @@ export class MenuComponent {
   }
 
   goToMapaInteractivo(): void {
-    this.routeStateService.add("Mapa Interactivo", "/tabs/mapa-interactivo/", null, false);    
+    this.routeStateService.goToMapaInteractivo();
   }
 
   goToAgendamento(): void {
-    this.routeStateService.add("Agendamento de Data Room", "/tabs/agendamento/", null, false);    
+    this.routeStateService.goToAgendamentoDataRoom();
   }
 
   goToDadosEap(): void {
-    this.routeStateService.add("Dados E & P", "/tabs/dados-eap/", null, false);    
+    this.routeStateService.goToDadosEap();
   }
 
   goToGlossario(): void {
