@@ -7,7 +7,7 @@ android {
   }
 }
 
-apply from: "../capacitor-cordova-android-plugins/cordova.variables.gradle"
+apply from: "../capacitor-cordova-android-plugins/variables.gradle"
 dependencies {
 
     implementation "androidx.appcompat:appcompat:1.0.0"
