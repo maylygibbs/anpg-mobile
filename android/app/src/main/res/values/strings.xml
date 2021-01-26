@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">ANPG App</string>
-    <string name="title_activity_main">ANPG App</string>
+    <string name="app_name">ANPG</string>
+    <string name="title_activity_main">ANPG</string>
     <string name="package_name">io.ionic.pg.ng.cap</string>
     <string name="custom_url_scheme">io.ionic.pg.ng.cap</string>
 </resources>

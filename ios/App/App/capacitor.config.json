@@ -1,6 +1,6 @@
 {
   "appId": "ao.co.anpg.ionic",
-  "appName": "ANPG App",
+  "appName": "ANPG",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "dist/angular-anpg-mobile-app",
