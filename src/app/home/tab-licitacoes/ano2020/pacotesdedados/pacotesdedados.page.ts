@@ -105,5 +105,19 @@ this.fileOpener.open('assets/pdf/Data_pack_CON_CONTENT_LIST.pdf','application/pd
          .catch( e => {
             console.log("Error copying file: " + JSON.stringify(e));
          });
+
+         console.log("Tentar usar o fileopener para abrir o pdf v4");
+         this.file.copyFile(this.file.applicationDirectory + 'www/assets/pdf/', "Data_pack_CON_CONTENT_LIST.pdf", this.file.dataDirectory, "Data_pack_CON_CONTENT_LIST.pdf")
+         .then( result => {
+             this.fileOpener.open(result.nativeURL, 'application/pdf')
+             .then( _ => {
+                 console.log('File opened');
+             })
+             .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
+          })
+          .catch( e => {
+             console.log("Error copying file: " + JSON.stringify(e));
+          });
+
       }
 }
