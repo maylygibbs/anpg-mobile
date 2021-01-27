@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FileOpener } from '@ionic-native/file-opener/ngx';
-import { File } from '@ionic-native/file/ngx';
+import { OpenPdf } from '../../shared/models/openpdf.module';
 
 @Component({
   selector: 'app-mapas',
@@ -10,7 +9,7 @@ import { File } from '@ionic-native/file/ngx';
 })
 export class MapasPage implements OnInit {
 
-  filepath: string = this.file.applicationDirectory + 'public/assets/pdf/mapas';
+  filepath: string = 'mapas';
   mapa1: string = '3367-OUT-19-GIS-GAD-MAPA-GERAL-DOS-BLOCOS-DO-KWANZA-DO-CONGO-LICITACAO-2020-1.pdf';
   mapa2: string = 'MAPA-DE-POÇOS-E-SISMICA-DO-CONGO-ONSHORE-LICITAÇÃO-2020.pdf';
   mapa3: string = 'MAPA-DE-POÇOS-E-SISMICA-DO-KWANZA-ONSHORE-LICITAÇÃO-2020.pdf';
@@ -22,132 +21,43 @@ export class MapasPage implements OnInit {
   mapa9: string = 'MAPA-DE-SÍSMICA-2D-.pdf';
   mapa10: string = 'MAPA-DE-SÍSMICA-3D-.pdf';
   mapa11: string = 'MAPA-GERAL-DO-NAMIBE-.pdf';
-  filetype: string = 'application/pdf';
 
-  constructor(private fileOpener: FileOpener, private file: File) { }
+  constructor(private openpdf:OpenPdf) { }
 
   ngOnInit() {
   }
 
   OpenMapa1PDF(){
-    this.file.copyFile(this.filepath, this.mapa1, this.file.dataDirectory, this.mapa1)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa1);
   }
   OpenMapa2PDF(){
-    this.file.copyFile(this.filepath, this.mapa2, this.file.dataDirectory, this.mapa2)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa2);
   }
   OpenMapa3PDF(){
-    this.file.copyFile(this.filepath, this.mapa3, this.file.dataDirectory, this.mapa3)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa3);
   }
   OpenMapa4PDF(){
-    this.file.copyFile(this.filepath, this.mapa1, this.file.dataDirectory, this.mapa4)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa4);
   }
   OpenMapa5PDF(){
-    this.file.copyFile(this.filepath, this.mapa5, this.file.dataDirectory, this.mapa5)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa5);
   }
   OpenMapa6PDF(){
-    this.file.copyFile(this.filepath, this.mapa6, this.file.dataDirectory, this.mapa6)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa6);
   }
   OpenMapa7PDF(){
-    this.file.copyFile(this.filepath, this.mapa7, this.file.dataDirectory, this.mapa7)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa7);
   }
   OpenMapa8PDF(){
-    this.file.copyFile(this.filepath, this.mapa8, this.file.dataDirectory, this.mapa8)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa8);
   }
   OpenMapa9PDF(){
-    this.file.copyFile(this.filepath, this.mapa9, this.file.dataDirectory, this.mapa9)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa9);
   }
   OpenMapa10PDF(){
-    this.file.copyFile(this.filepath, this.mapa10, this.file.dataDirectory, this.mapa10)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa10);
   }
   OpenMapa11PDF(){
-    this.file.copyFile(this.filepath, this.mapa11, this.file.dataDirectory, this.mapa11)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.mapa11);
   }
 }

@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
-import { FileOpener } from '@ionic-native/file-opener/ngx';
-import { File } from '@ionic-native/file/ngx';
+import { OpenPdf } from '../../../../shared/models/openpdf.module';
 
 @Component({
   selector: 'app-pacotesdedados',
@@ -11,35 +10,18 @@ import { File } from '@ionic-native/file/ngx';
 })
 export class PacotesdedadosPage implements OnInit {
 
-  filepath: string = this.file.applicationDirectory + 'public/assets/pdf/lic2020pacotedados';
+  filepath: string = 'lic2020pacotedados';
   congofile: string = 'Data_pack_CON_CONTENT_LIST.pdf';
   Kwanzafile: string = 'Data_pack_KON_CONTENT_LIST.pdf';
-  filetype: string = 'application/pdf';
 
-  constructor(private fileOpener: FileOpener, private file: File) { }
+  constructor(private openpdf:OpenPdf) { }
 
   ngOnInit() {
   }
   OpenCongoPDF(){
-    this.file.copyFile(this.filepath, this.congofile, this.file.dataDirectory, this.congofile)
-    .then( result => {
-        this.fileOpener.open(result.nativeURL, this.filetype)
-        .then( _ => { })
-        .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-    })
-    .catch( e => {
-        console.log("Error copying file: " + JSON.stringify(e));
-  });
+    this.openpdf.openpdf(this.filepath,this.congofile);
   }
   OpenKwanzaPDF(){
-    this.file.copyFile(this.filepath, this.Kwanzafile, this.file.dataDirectory, this.Kwanzafile)
-      .then( result => {
-          this.fileOpener.open(result.nativeURL, this.filetype)
-          .then( _ => { })
-          .catch(e => console.log("Error opening file: " + JSON.stringify(e)));
-      })
-      .catch( e => {
-          console.log("Error copying file: " + JSON.stringify(e));
-    });
+    this.openpdf.openpdf(this.filepath,this.Kwanzafile);
   }
 }
