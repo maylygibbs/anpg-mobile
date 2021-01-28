@@ -1,4 +1,4 @@
-package io.ionic.pg.ng.cap;
+package ao.co.anpg.ionic;
 
 import android.os.Bundle;
 
