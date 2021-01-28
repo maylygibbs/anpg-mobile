@@ -1,11 +1,11 @@
-import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ISector } from 'src/app/shared/interfaces/isector.interface';
-import { News } from 'src/app/shared/models/news.model';
 import { SectorService } from 'src/app/shared/services/sector.service';
 import { INews } from '../../../shared/interfaces/inews.interface';
 import { NewsService } from '../../../shared/services/news.service';
-import { RouteStateService } from '../../../shared/services/route-state.service';
+import { Router, NavigationExtras,ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-news',
@@ -21,18 +21,20 @@ export class TabNews {
   
   constructor(private newsService: NewsService,
               private sectorService: SectorService,
-              private routeStateService: RouteStateService) {
+              private router: Router,private route:ActivatedRoute) {
     this.noticias$ = this.newsService.getAllNews();
     this.sectors$ = sectorService.getAllSectors();
   }
 
-  goBack(): void {
-    this.routeStateService.loadPrevious();
-  }
-
-  detalhe(item: INews): void {        
-    /*console.log(item);*/
-    this.routeStateService.add("Noticias", "/tabs/news-detalhe/", item, false);        
-  }
+  detalhe(itemtosend: INews): void {        
+    let navigationExtras: NavigationExtras = {
+      state: {
+        item: itemtosend
+      }
+    };
+   
+    this.router.navigate(['/tabs/sala-de-imprensa/news-detalhe'], navigationExtras);      
+    
+  } 
 
 }

@@ -157,16 +157,6 @@ const routes: Routes = [
           }
         ]
       },
-       {
-        path: 'news-detalhe',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../home/tab-sala-de-imprensa/tab-news-detalhe/tab-news-detalhe.module').then(m => m.TabNewsDetalheModule)
-          }
-        ]
-      }, 
       {
         path: 'sobrenos',
         loadChildren: () => import('../home/sobrenos/sobrenos.module').then( m => m.SobrenosPageModule)

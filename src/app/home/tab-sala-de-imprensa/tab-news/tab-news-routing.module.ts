@@ -8,11 +8,6 @@ const routes: Routes = [
     path: '',
     component: TabNews
   },
-  /* TODO a ver se isto se poe */
- /*{
-    path: 'news-detalhe',
-        loadChildren: () => import('../tab-news-detalhe/tab-news-detalhe.module').then(m => m.TabNewsDetalheModule)
-  }, */ 
 ];
 
 @NgModule({
