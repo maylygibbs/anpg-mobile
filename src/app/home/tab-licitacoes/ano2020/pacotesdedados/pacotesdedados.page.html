@@ -10,22 +10,36 @@
     </ion-col>
   </ion-row>
     <ion-row (click)="OpenCongoPDF()" expand="full">
-    <ion-col>
-      <ion-item lines="full">
-        <ion-label class="ion-text-wrap">
-          BAIXO CONGO: Blocos CON1,CON5 e CON6
-        </ion-label>
-      </ion-item>
+      <ion-col>
+        <ion-card class="card-button">
+          <ion-item lines="none">
+            <ion-label class="card-button-text ion-text-wrap">
+            Lista de Conteúdos do Pacote de Dados do Baixo Congo
+          </ion-label>
+        </ion-item>
+      </ion-card>
     </ion-col>
   </ion-row>
   <ion-row (click)="OpenKwanzaPDF()" expand="full">
     <ion-col>
-      <ion-item lines="full">
-        <ion-label class="ion-text-wrap">
-          KWANZA: Blocos KON5,KON6, KON8, KON9, KON17 e KON20
+      <ion-card class="card-button"> 
+        <ion-item lines="none">
+          <ion-label class="card-button-text ion-text-wrap">
+          Lista de Conteúdos do Pacote de Dados do Kwanza
         </ion-label>
       </ion-item>
+    </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row (click)="OpenAtlasPDF()" expand="full">
+    <ion-col>
+      <ion-card class="card-button"> 
+        <ion-item lines="none">
+          <ion-label class="card-button-text">
+            Lista de Conteúdos dos Atlas
+          </ion-label>
+        </ion-item>
+      </ion-card>
     </ion-col>
   </ion-row>
 </ion-content>
- 

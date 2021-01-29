@@ -13,6 +13,7 @@ export class PacotesdedadosPage implements OnInit {
   filepath: string = 'lic2020pacotedados';
   congofile: string = 'Data_pack_CON_CONTENT_LIST.pdf';
   Kwanzafile: string = 'Data_pack_KON_CONTENT_LIST.pdf';
+  Atlasfile: string = 'ATLAS_CONTENT_LICITACAO2020_Final.pdf';
 
   constructor(private openpdf:OpenPdf) { }
 
@@ -23,5 +24,8 @@ export class PacotesdedadosPage implements OnInit {
   }
   OpenKwanzaPDF(){
     this.openpdf.openpdf(this.filepath,this.Kwanzafile);
+  }
+  OpenAtlasPDF(){
+    this.openpdf.openpdf(this.filepath,this.Atlasfile);
   }
 }

@@ -5,7 +5,7 @@
       <ion-row class="ion-align-items-center"> 
         <ion-col>
           <ion-card class="card-button" > 
-            <ion-item lines="none" style="cursor:pointer;">
+            <ion-item (click)="OpenEstrategiaPDF()" expand="full" lines="none" style="cursor:pointer;">
               <ion-label class="card-button-text">
                 Estratégia
               </ion-label>
@@ -17,21 +17,9 @@
       <ion-row class="ion-align-items-center"> 
         <ion-col>
           <ion-card class="card-button"> 
-            <ion-item lines="none" style="cursor:pointer;">
+            <ion-item (click)="OpenRequisitosPDF()" expand="full" lines="none" style="cursor:pointer;">
               <ion-label class="card-button-text">
-                Adjudicações
-              </ion-label>
-            </ion-item>
-          </ion-card>
-        </ion-col>    
-      </ion-row>
-
-      <ion-row class="ion-align-items-center"> 
-        <ion-col>
-          <ion-card class="card-button"> 
-            <ion-item lines="none" style="cursor:pointer;">
-              <ion-label class="card-button-text">
-                RoadShows
+                Requisitos
               </ion-label>
             </ion-item>
           </ion-card>
