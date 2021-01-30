@@ -56,8 +56,8 @@ export class MenuComponent {
     this.routeStateService.add("Glossario", "/tabs/glossario/", null, false);    
   }
 
-  goToBuscar(): void {
-    this.routeStateService.add("Buscar", "/tabs/search/", null, false);    
+  goToPesquisar(): void {
+    this.routeStateService.add("Pesquisar", "/tabs/search/", null, false);    
   }
 
   goToFavoritos(): void {
@@ -73,6 +73,6 @@ export class MenuComponent {
   }  
 
   goToNoticias(): void {
-    this.routeStateService.add("FAQ", "/tabs/news/", null, false);    
+    this.routeStateService.add("Noticias", "/tabs/news/", null, false);    
   }
 }

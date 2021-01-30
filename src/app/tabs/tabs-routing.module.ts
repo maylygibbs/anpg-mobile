@@ -17,46 +17,46 @@ const routes: Routes = [
           }
         ]
       },
-      {
-        path: 'search',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../search/search.module').then(m => m.SearchPageModule)
-          }
-        ]
-      },
-      {
-        path: 'tab3',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-          }
-        ]
-      },
-      {
-        path: 'favoritos',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../favoritos/favoritos.module').then(m => m.FavoritosPageModule)
-          }
-        ]
-      },
-      {
-        path: 'utilizador',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../utilizador/utilizador.module').then(m => m.UtilizadorPageModule)
-          }
-        ]
-      },
+      // {
+      //   path: 'search',
+      //   children: [
+      //     {
+      //       path: '',
+      //       loadChildren: () =>
+      //         import('../search/search.module').then(m => m.SearchPageModule)
+      //     }
+      //   ]
+      // },
+      // {
+      //   path: 'tab3',
+      //   children: [
+      //     {
+      //       path: '',
+      //       loadChildren: () =>
+      //         import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+      //     }
+      //   ]
+      // },
+      // {
+      //   path: 'favoritos',
+      //   children: [
+      //     {
+      //       path: '',
+      //       loadChildren: () =>
+      //         import('../favoritos/favoritos.module').then(m => m.FavoritosPageModule)
+      //     }
+      //   ]
+      // },
+      // {
+      //   path: 'utilizador',
+      //   children: [
+      //     {
+      //       path: '',
+      //       loadChildren: () =>
+      //         import('../utilizador/utilizador.module').then(m => m.UtilizadorPageModule)
+      //     }
+      //   ]
+      // },
       {
         path: 'splash',
         children: [
@@ -117,16 +117,16 @@ const routes: Routes = [
           }
         ]
       },
-      {
-        path: 'favoritos',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../favoritos/favoritos.module').then(m => m.FavoritosPageModule)
-          }
-        ]
-      },
+      // {
+      //   path: 'favoritos',
+      //   children: [
+      //     {
+      //       path: '',
+      //       loadChildren: () =>
+      //         import('../favoritos/favoritos.module').then(m => m.FavoritosPageModule)
+      //     }
+      //   ]
+      // },
       {
         path: 'glossario',
         children: [
