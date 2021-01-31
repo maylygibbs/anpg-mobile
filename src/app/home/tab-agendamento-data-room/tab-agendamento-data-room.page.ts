@@ -12,7 +12,7 @@ import { IAgendamento } from 'src/app/shared/interfaces/iagendamento.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TabAgendamentoDataRoom {
-  date: string;
+  data: string;
   type: 'string';
 
   nome: string;
@@ -42,7 +42,7 @@ export class TabAgendamentoDataRoom {
 
   onChange($event) {
     console.log($event);
-    console.log(this.date);
+    console.log(this.data);
   }
   
   async presentAlert() {
@@ -70,15 +70,15 @@ export class TabAgendamentoDataRoom {
 
   submeter(): any {
     const agendamento: IAgendamento = {
-      date: this.date,
+      data: new Date(this.data),
       nome: this.nome,
       empresa: this.empresa,
-      qtdeVisitantes: this.qtdeVisitantes,
+      nVisitantes: this.qtdeVisitantes,
       email: this.email,
       areaInteresse: this.areaInteresse    
     };
     console.log(agendamento);
-    if (!this.date || !this.nome || !this.empresa || !this.qtdeVisitantes || !this.email || !this.areaInteresse) {
+    if (!this.data || !this.nome || !this.empresa || !this.qtdeVisitantes || !this.email || !this.areaInteresse) {
       //this.errorMessage = 'Por favor preencha os campos em falta.';
       //this.successMessage = '';
       this.presentAlert();
@@ -92,7 +92,7 @@ export class TabAgendamentoDataRoom {
         this.successMessage = '';
         return null;
       } else {
-        this.date="";
+        this.data="";
         this.nome="";
         this.empresa="";
         this.qtdeVisitantes=0;

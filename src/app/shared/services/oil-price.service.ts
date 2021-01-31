@@ -16,7 +16,7 @@ export class OilPriceService {
     const httpOptions = {
       headers: new HttpHeaders(
         { 
-          'Authorization': `Token ${environment.oilPriceApiToken}`
+          'Authorization': `Token ${environment.apiToken}`
           //, 'Access-Control-Allow-Origin': '*'
         })
     };    

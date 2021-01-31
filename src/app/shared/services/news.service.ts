@@ -19,12 +19,10 @@ export class NewsService {
     const httpOptions = {
       headers: new HttpHeaders(
         { 
-          'Authorization': `Token ${environment.oilPriceApiToken}`
+          'Authorization': `Token ${environment.apiToken}`
         })
     };    
     const urlService = environment.apiUrl + "Noticias";
     return this.http.get<INews[]>(urlService, httpOptions);
-
-//    return of(this.newsItems);
   }
 }

@@ -1,8 +1,8 @@
 export interface IAgendamento {
-    date: string;
+    data: Date;
     nome: string;
     empresa: string;
-    qtdeVisitantes: number;
+    nVisitantes: number;
     email: string;
     areaInteresse: string;
 }

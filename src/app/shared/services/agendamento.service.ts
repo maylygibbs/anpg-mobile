@@ -11,15 +11,20 @@ export class AgendamentoService {
   constructor(private http: HttpClient) { }
 
    gravarAgendamento(agendamento: IAgendamento): any {
-
     const httpOptions = {
       headers: new HttpHeaders(
         { 
-          'Authorization': `Token ${environment.oilPriceApiToken}`
-          //, 'Access-Control-Allow-Origin': '*'
+            'Authorization': `Token ${environment.apiToken}`
+          , 'Content-Type': 'application/json'
+          , 'Accept': 'application/json'
+          , 'Access-Control-Allow-Origin': '*'
         })
-    };
-    const req = this.http.post( environment.apiUrl + "Agenda", agendamento, httpOptions);
+    };    
+
+    const urlService = environment.apiUrl + "Agenda";
+    const req = this.http.post( urlService, agendamento, httpOptions).toPromise();
+    //.then(response => response.toString(), this.gravarAgendamento);
+
     return req;
    }
 
