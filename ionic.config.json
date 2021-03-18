@@ -1,0 +1,7 @@
+{
+  "name": "anpg-ionic-mobile-app2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
