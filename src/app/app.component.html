@@ -1,3 +1,13 @@
 <ion-app>
+
+  <ion-content *ngIf="!charging" class="fundoApp">
+    <div>
+      <div class="logoSplash">
+        <img src="assets/icon/LogoSpashScreen.svg" style="transform: scale(1.5);">
+      </div>
+    </div>
+  </ion-content>
+  
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+ 

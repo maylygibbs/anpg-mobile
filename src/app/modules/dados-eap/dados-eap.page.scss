@@ -1,0 +1,38 @@
+ion-content {
+    --background: rgb(228, 227, 227);
+    --overflow: hidden;
+  
+  
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: none;
+      background-color: black;
+    }
+  
+    /* Style the buttons that are used to open the tab content */
+    ion-button {
+      --border-radius: 0px;
+      --background: black;
+  
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      color: white;
+      height: 60px;
+    }
+  }
+  ion-content ion-toolbar {
+    --background: translucent;
+  }
+  .btn-tab-dados div {
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+  }
+  .btn-tab-dados img {
+    height: 25px;
+    margin-bottom: 9px;
+  }

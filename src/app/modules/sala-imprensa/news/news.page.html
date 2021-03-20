@@ -1,0 +1,30 @@
+<ion-content>
+  <app-header title="Sala de Imprensa | Noticias"></app-header>
+  
+  <img class="responsive news-img" src="assets/img/noticia_5_2x.png">
+  
+  <!-- A por quando houver setores-->
+ <!--   <div style="height:24px;background-color: darkred;color:white;padding:5px;font-size: small;">
+    <span style="color:orangered;">INOVACAO</span> | REGULACAO | CAPITAL HUMANO
+  </div> -->
+  <div style="height:24px;background-color: darkred;color:white;padding:5px;font-size: small;">
+  </div>
+  
+  <div>
+      <ion-item *ngFor="let item of noticias$ | async; first as isFirst">
+        <div style="padding:5px;cursor: pointer!important;" (click)="detalhe(item)">
+          <div *ngIf="isFirst" style="height:20px;opacity: 0.8; background:white;"></div> <!--Dar uma margem para o topo no primeiro elemento -->
+          <table>
+              <tr>
+                <td><img [src]="item.img" class="side-img"></td>
+                <td class="news-text">
+                  <!--<b>{{ item.sector }} |</b><br>-->
+                  <b>{{ item.titulo }}</b>
+                  <div class="news-summary" [innerHTML]="item.texto.substring(0,200)"></div>
+                </td>              
+              </tr>              
+          </table>
+        </div>        
+      </ion-item>
+  </div>
+</ion-content>

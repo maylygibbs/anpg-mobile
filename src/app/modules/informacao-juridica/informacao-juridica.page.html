@@ -1,0 +1,62 @@
+<ion-content>
+  <app-header title="Informação Juridica"></app-header>
+  
+  <ion-grid style="padding-top: 40px;">
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button" > 
+            <ion-item lines="none" routerLink="decretos">
+                <img src="assets/icon/DecretosPresidenciais.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Decretos Presidenciais
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item (click)="openQuadroLegalPDF()" expand="full" lines="none">
+                <img src="assets/icon/QuadroLegal.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Quadro Legal
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none">
+                <img src="assets/icon/TipologiaContratos.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Tipologia de Contratos
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none">
+                <img src="assets/icon/LegislacaoAdicional.svg" class="card-button-img"> 
+              <ion-label class="card-button-text">
+                Legislação Adicional
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+  
+
+  </ion-grid> 
+
+  <app-oil-sticker></app-oil-sticker>
+  
+</ion-content>

@@ -1,0 +1,40 @@
+.wrapper {
+    transition: 0.2s linear;
+}   
+
+.collapsed {
+    height: 0 !important;
+}
+
+expand-wrapper {
+    .wrapper {
+        transition: 0.2s linear;
+    }   
+ 
+    .collapsed {
+        height: 0 !important;
+    }
+}
+expandable {
+ 
+    .wrapper {
+        transition: 0.2s linear;
+    }   
+ 
+    .collapsed {
+        height: 0 !important;
+    }
+ 
+}
+
+wrapper {
+ 
+    .wrapper {
+        transition: 0.2s linear;
+    }   
+ 
+    .collapsed {
+        height: 0 !important;
+    }
+ 
+}

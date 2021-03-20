@@ -14,7 +14,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "www",
+            "allowedCommonJsDependencies": [
+              "ion2-calendar"
+            ],
+            "aot": true,
+            "outputPath": "dist/angular-anpg-mobile-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -166,6 +170,7 @@
     }
   },
   "cli": {
+    "analytics": "fde86e68-b2f4-49a3-9514-b6803c247c8d",
     "defaultCollection": "@ionic/angular-toolkit"
   },
   "schematics": {

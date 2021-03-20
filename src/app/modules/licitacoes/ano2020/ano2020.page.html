@@ -1,0 +1,45 @@
+<ion-content>
+  <app-header title="2020"></app-header>
+
+  <ion-grid style="padding-top: 40px;">
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button" > 
+            <ion-item (click)="openEstrategiaPDF()" expand="full" lines="none" style="cursor:pointer;">
+              <ion-label class="card-button-text">
+                Estratégia
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item (click)="openRequisitosPDF()" expand="full" lines="none" style="cursor:pointer;">
+              <ion-label class="card-button-text">
+                Requisitos
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+
+      <ion-row class="ion-align-items-center"> 
+        <ion-col>
+          <ion-card class="card-button"> 
+            <ion-item lines="none" routerLink="pacotesdedados" style="cursor:pointer;">
+              <ion-label class="card-button-text">
+                Pacotes de Dados
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-col>    
+      </ion-row>
+  </ion-grid> 
+
+  <app-oil-sticker></app-oil-sticker>
+
+</ion-content>
+

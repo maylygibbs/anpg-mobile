@@ -1,0 +1,55 @@
+<div>
+  <ion-card class="card-content" > 
+    <ion-item lines="none">
+      <div class="contenedor-tabla">
+        <div class="contenedor-fila">
+            <div class="contenedor-columna">
+              <img src="/assets/icon/new-icons/arrow-circle-left.svg">
+             </div>
+    
+            <div class="contenedor-columna">
+              <img src="/assets/icon/new-icons/arrow-circle-right.svg">
+            </div>
+        </div>
+    </div>
+      
+    </ion-item>
+  </ion-card>
+  <ion-card class="card-content" > 
+    <ion-item lines="none">
+      <table>
+        <tr>
+          <th>
+            <ion-label class="card-content-text">
+              Mes/Año
+            </ion-label>
+          </th>
+          <th>
+            <ion-label class="card-content-text">
+              Petroleo <br>(cc3/m2)
+            </ion-label>
+          </th>
+        </tr>
+      </table>
+    </ion-item>
+  </ion-card>
+  <ion-card class="card-content" > 
+    <ion-item class="ion-padding-bottom">
+      <table *ngIf="producaoResponse && producaoResponse.data" class="dados">
+        <tr *ngFor="let prod of producaoResponse.data">          
+          <td>
+            <ion-label class="card-content-text" >
+              {{prod.mes}}/{{prod.ano}}
+            </ion-label>
+          </td>
+          <td>
+            <ion-label class="card-content-text">
+              {{prod.quantidade | number:'1.0'}}
+            </ion-label>
+          </td>
+        </tr>
+      </table>
+    </ion-item>
+  </ion-card>
+</div>
+

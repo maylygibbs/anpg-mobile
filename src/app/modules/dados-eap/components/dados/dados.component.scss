@@ -1,0 +1,60 @@
+div {
+    --background: rgb(207, 205, 205);
+
+    ion-card,
+    ion-item {
+        fill: rgb(241, 242, 245);
+    }
+
+    .contenedor-tabla {
+        display: table;
+        width: 100%;
+    }
+
+    .contenedor-fila {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contenedor-columna {
+        display: flex;
+        align-items: center;
+    }
+
+    .contenedor-columna img {
+        width: 35px;
+    }
+
+    .card-content {
+        border-radius: 10px;
+    }
+
+    .card-content-text {
+        font-family: FranklinGothic-Medium;
+        text-align: left;
+
+    }
+
+    th{
+        color:rgb(128, 31, 31);
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+    }
+    
+    table.dados {
+    
+    & td {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    
+    & tr  {
+        border-bottom: solid 1px rgb(128, 31, 31);;
+    }
+  }
+    
+}

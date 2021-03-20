@@ -1,0 +1,36 @@
+ion-content {
+    --background: #818386 url("/assets/img/angola2x.png") no-repeat right top;
+  }
+  
+  ion-button { 
+    --background:darkred;
+  }
+  
+  .news-text {
+    font-family: Bahnschrift-SemiLightSemiCondensed;
+    color: black !important;
+    font-size:10px;
+    padding-left:10px;
+    text-align: left;
+    vertical-align: top;
+    line-height:10px;
+    padding-top: 10px;
+  }
+  .news-summary{
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+  
+  .news-img {
+    width: 100%;
+    display: block;
+  }
+  
+  .side-img {
+    max-width:60px;
+  }
+  
+  ion-card, ion-item{
+    opacity: 0.8;
+    fill: rgba(224,225,227,1);
+  }

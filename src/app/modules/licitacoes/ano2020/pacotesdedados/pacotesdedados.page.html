@@ -1,0 +1,45 @@
+<ion-content>
+  <app-header title="Pacotes de Dados"></app-header>
+  <ion-row style="padding-top: 40px;">
+    <ion-col>
+      <ion-item lines="full">
+        <ion-label class="ion-text-wrap pacote-header">
+          Bacias Terrestres do Baixo Congo e do Kwanza
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+    <ion-row (click)="openCongoPDF()" expand="full">
+      <ion-col>
+        <ion-card class="card-button">
+          <ion-item lines="none">
+            <ion-label class="card-button-text ion-text-wrap">
+            Lista de Conteúdos do Pacote de Dados do Baixo Congo
+          </ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row (click)="openKwanzaPDF()" expand="full">
+    <ion-col>
+      <ion-card class="card-button"> 
+        <ion-item lines="none">
+          <ion-label class="card-button-text ion-text-wrap">
+          Lista de Conteúdos do Pacote de Dados do Kwanza
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row (click)="openAtlasPDF()" expand="full">
+    <ion-col>
+      <ion-card class="card-button"> 
+        <ion-item lines="none">
+          <ion-label class="card-button-text">
+            Lista de Conteúdos dos Atlas
+          </ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

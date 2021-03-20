@@ -1,0 +1,42 @@
+ion-content {
+    --background: darkred url('/assets/img/angola2x.png') no-repeat right top;
+  }
+  ion-content ion-toolbar {
+    --background: translucent;
+  }
+  
+
+  .card-top{
+    padding: 5px;
+    background: white;
+  }
+
+  .card-button-img{
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+  
+  .card-button{
+    margin-left: 0px;
+    padding: 0px;
+    border-radius: 12px;
+    height: 60px;
+    padding-top: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .card-button-img {
+    width: 30px;
+    padding-left: 2px;
+    padding-right: 5px;;
+  }
+  
+  .card-button-text {
+      font-family: FranklinGothic-Medium;														 
+  }
+  
+  ion-card, ion-item{
+    opacity: 0.8;
+    fill: rgba(224,225,227,1);
+  }

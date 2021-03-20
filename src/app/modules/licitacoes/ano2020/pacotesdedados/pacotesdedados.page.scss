@@ -1,0 +1,30 @@
+
+ion-content{
+    --background: #fff url('/assets/img/bacias.png') no-repeat center center / cover;
+}
+
+.pacote-header{
+    font-size: 30px;
+    font-family: FranklinGothic-Medium;
+}
+
+ion-card, ion-item{
+    --background: white;    
+    opacity: 0.8;
+    fill: rgba(224,225,227,1);
+  }
+ 
+  .card-button{
+    margin-left: 0px;
+    padding: 0px;
+    border-radius: 12px;
+    height: 60px;
+    padding-top: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  
+  .card-button-text {
+      font-family: FranklinGothic-Medium;														 
+  }
+  

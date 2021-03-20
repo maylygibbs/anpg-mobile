@@ -1,0 +1,90 @@
+div {
+    --overflow: scroll;
+    ion-card,
+    ion-item {
+        fill: rgb(241, 242, 245);
+    }
+
+    .card-title-text {
+        color: rgb(128, 31, 31);
+    }
+
+    .card-content {
+        border-radius: 10px;
+    }
+
+    .card-content-text {
+        font-family: FranklinGothic-Medium;
+        text-align: left;
+        color: rgb(128, 31, 31);
+        font-size: 16px;
+    }
+    .card-content.ambiente table td,
+    .card-content.liquido table td,
+    .card-content.unidade table td {
+        display: flex;
+        align-items: center;
+    }
+    .card-content.ambiente table tr,
+    .card-content.liquido table tr,
+    .card-content.unidade table tr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .card-content table td img {
+        width: 32px;
+        margin-right: 14px;
+    }
+    .card-content.liquido table tr:first-of-type td img,
+    .card-content.liquido table tr:nth-of-type(3) td img {
+        width: 18px;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+    }
+}
+
+.content-filter {
+    height: 100%;
+    border: 1px black solid;
+    padding-bottom: 10px;
+}
+
+.scrollable-content {
+    height: 85%;
+    overflow: auto;
+}
+
+ion-button.btn-red-border::part(native) {
+    border-color: rgb(128, 31, 31) !important;
+    color: rgb(128, 31, 31);
+    width: 40px;
+    border-radius: 0.4rem;
+    font-size: 18px;
+}
+ion-checkbox {
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-radius: 4px;
+    border-color: rgb(128, 31, 31) !important;
+    --height: 35px;
+    --width: 35px;
+    --checkmark-color: #ffffff;
+    --background-checked: rgb(128, 31, 31);
+    --border-color: #ffffff;
+    --border-color-checked: rgb(128, 31, 31);
+}
+
+/**  
+ESTILOS CUSTOMIZADOS PARA LOS SELECT OPTIONS EN EL COMPONENT
+::ng-deep .alert-wrapper.sc-ion-alert-md {
+    border-radius: 17px !important;
+}
+
+*/

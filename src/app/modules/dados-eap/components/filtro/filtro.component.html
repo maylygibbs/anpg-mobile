@@ -1,0 +1,246 @@
+<div class="content-filter">
+  <div class="scrollable-content">
+
+    <form #ngFormFilter="ngForm" (ngSubmit)="submitFilter()" novalidate>
+      <ion-card class="card-content ion-padding">
+        <ion-card-header>
+          <ion-card-title class="card-title-text">Ano</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <table>
+            <tr>
+              <td>
+                <ion-label class="card-content-text" [innerHtml]="'Desde: '+desdeAno">
+                </ion-label>
+              </td>
+              <td>
+                <ion-button class="btn-red-border" fill="outline">-</ion-button>
+                <ion-button class="btn-red-border" fill="outline">+</ion-button>
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <ion-label class="card-content-text" [innerHtml]="'Ate: '+ateAno">
+                </ion-label>
+              </td>
+              <td>
+                <ion-button class="btn-red-border" fill="outline">-</ion-button>
+                <ion-button class="btn-red-border" fill="outline">+</ion-button>
+              </td>
+            </tr>
+          </table>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="card-content ion-padding">
+        <ion-card-header>
+          <ion-card-title class="card-title-text">Mes</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <table>
+            <tr>
+              <td>
+                <ion-label class="card-content-text" [innerHtml]="'Desde: '+desdeMes">
+                </ion-label>
+              </td>
+              <td>
+                <ion-button class="btn-red-border" fill="outline">-</ion-button>
+                <ion-button class="btn-red-border" fill="outline">+</ion-button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ion-label class="card-content-text" [innerHtml]="'Ate: '+ateMes">
+                </ion-label>
+              </td>
+              <td>
+                <ion-button class="btn-red-border" fill="outline">-</ion-button>
+                <ion-button class="btn-red-border" fill="outline">+</ion-button>
+              </td>
+            </tr>
+          </table>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="card-content ambiente ion-padding">
+        <ion-card-header>
+          <ion-card-title class="card-title-text">Ambiente</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <table>
+            <tr>
+              <td>
+                <img src="assets/icon/new-icons/onshore.svg">
+                <ion-label class="card-content-text" [innerHtml]="'Onshore (tierra)'">
+                </ion-label>
+              </td>
+              <td>
+                <ion-checkbox mode="md"></ion-checkbox>
+              </td>
+            </tr>
+            <tr>
+            
+              <td>
+                <img src="assets/icon/new-icons/offshore.svg">
+                <ion-label class="card-content-text" [innerHtml]="'Offshore (mar)'">
+                </ion-label>
+              </td>
+              <td>
+                <ion-checkbox mode="md"></ion-checkbox>
+              </td>
+            </tr>
+          </table>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="card-content liquido ion-padding">
+        <ion-card-header>
+          <ion-card-title class="card-title-text">Liquido (petróleo bruto)</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <table>
+            <tr>
+              <td>
+                <img src="assets/icon/new-icons/petroleo.svg">
+                <ion-label class="card-content-text" [innerHtml]="'Petróleo'">
+                </ion-label>
+              </td>
+              <td>
+                <ion-checkbox mode="md"></ion-checkbox>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets/icon/new-icons/gas.svg">
+                <ion-label class="card-content-text" [innerHtml]="'Gás natural liquefeito (LNG)'">
+                </ion-label>
+              </td>
+              <td>
+                <ion-checkbox mode="md"></ion-checkbox>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets/icon/new-icons/oleo.svg">
+                <ion-label class="card-content-text" [innerHtml]="'Óleo'">
+                </ion-label>
+              </td>
+              <td>
+                <ion-checkbox mode="md"></ion-checkbox>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets/icon/new-icons/condensado.svg">
+                <ion-label class="card-content-text" [innerHtml]="'Condensado'">
+                </ion-label>
+              </td>
+              <td>
+                <ion-checkbox mode="md"></ion-checkbox>
+              </td>
+            </tr>
+          </table>
+        </ion-card-content>
+
+      </ion-card>
+      <ion-card class="card-content ion-padding">
+        <ion-card-header>
+          <ion-card-title class="card-title-text">Empresa</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-label class="card-content-text" [innerHtml]="'Empresa'">
+            </ion-label>
+            <ion-select [selectedText]="selectedTextEmpresas" [interfaceOptions]="customAlertOptionsEmpresa" interface="alert" name="empresasSelected" [(ngModel)]="empresasSelected"
+              multiple="true" (ionChange)="onChangeSelectEmpresas($event)">
+              <ion-select-option *ngFor="let empresa of empresas" [value]="empresa">{{empresa.nomeNormalizado}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label class="card-content-text" [innerHtml]="'Província'">
+            </ion-label>
+            <ion-select [selectedText]="selectedTextProvincias" name="provinciasSelected" [(ngModel)]="provinciasSelected" [value]="provinciasSelected"
+              multiple="true" cancelText="Cancelar" okText="Ok" (ionChange)="onChangeSelectProvincias($event)">
+              <ion-select-option *ngFor="let provincia of provincias" [value]="provincia">
+                {{provincia.nomeNormalizado}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label class="card-content-text" [innerHtml]="'Bacia'">
+            </ion-label>
+            <ion-select [selectedText]="selectedTextBacias" name="baciasSelected" [(ngModel)]="baciasSelected" [value]="baciasSelected"
+              multiple="true" cancelText="Cancelar" okText="Ok" (ionChange)="onChangeSelectBacias($event)">
+              <ion-select-option *ngFor="let bacia of bacias" [value]="bacia">{{bacia.nomeNormalizado}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label class="card-content-text" [innerHtml]="'Bloco'">
+            </ion-label>
+            <ion-select [selectedText]="selectedTextBlocos" name="blocosSelected" [(ngModel)]="blocosSelected" [value]="blocosSelected"
+              multiple="true" cancelText="Cancelar" okText="Ok" (ionChange)="onChangeSelectBlocos($event)">
+              <ion-select-option *ngFor="let bloco of blocos" [value]="bloco">{{bloco.nomeUpperCase}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>                   
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="card-content unidade ion-padding">
+        <ion-card-header>
+          <ion-card-title class="card-title-text">Unidade de Medida</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <table>
+            <tr>
+              <td>
+                <ion-label class="card-content-text" [innerHtml]="'m3'">
+                </ion-label>
+              </td>
+              <td>
+                <ion-checkbox mode="md"></ion-checkbox>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ion-label class="card-content-text" [innerHtml]="'m3/d'">
+                </ion-label>
+              </td>
+              <td>
+                <ion-checkbox mode="md"></ion-checkbox>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ion-label class="card-content-text" [innerHtml]="'bbl'">
+                </ion-label>
+              </td>
+              <td>
+                <ion-checkbox mode="md"></ion-checkbox>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ion-label class="card-content-text" [innerHtml]="'bbl/d'">
+                </ion-label>
+              </td>
+              <td>
+                <ion-checkbox mode="md"></ion-checkbox>
+              </td>
+            </tr>
+          </table>
+        </ion-card-content>
+      </ion-card>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="12" class="ion-text-center">
+           <ion-button>Aplicar</ion-button>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+
+
+
+  </div>
+
+</div>

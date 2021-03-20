@@ -1,0 +1,12 @@
+<ion-content>
+  <app-header title="FAQ"></app-header>
+  <div style="background-color: transparent;height:10px; margin-top: 40px;">
+  </div>
+  
+  <app-mi-accordion 
+     *ngFor="let faq of faqs$ | async" 
+     name="{{ faq.title }}" 
+     image=""
+     description="{{ faq.answer }}" 
+    > </app-mi-accordion>
+</ion-content>

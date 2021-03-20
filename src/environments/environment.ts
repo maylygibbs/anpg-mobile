@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://anpgwebapi.azurewebsites.net/api/',
+  apiToken: '17bc09ee0e73192cda29208e27996dea',
 };
 
 /*
