@@ -1,5 +1,7 @@
-div {
-    --overflow: scroll;
+ /*Card Content Styles */ 
+
+ div {
+
     ion-card,
     ion-item {
         fill: rgb(241, 242, 245);
@@ -17,7 +19,7 @@ div {
         font-family: FranklinGothic-Medium;
         text-align: left;
         color: rgb(128, 31, 31);
-        font-size: 16px;
+        font-size: 17px;
     }
     .card-content.ambiente table td,
     .card-content.liquido table td,
@@ -34,14 +36,26 @@ div {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .card-content table td img {
-        width: 32px;
-        margin-right: 14px;
+    .card-content table td span,
+    .card-content ion-item span {
+    width: 30px;
+    margin-right: 14px;
+    text-align: center;
+     }
+    .card-content table td img,
+    .card-content ion-item img {
+        width: 100%;
+   
     }
     .card-content.liquido table tr:first-of-type td img,
     .card-content.liquido table tr:nth-of-type(3) td img {
         width: 18px;
     }
+   .card-content ion-item::part(native) {
+
+    margin-left: 0;
+    padding-left: 0;
+}
 
     table {
         border-collapse: collapse;
@@ -52,14 +66,19 @@ div {
 
 .content-filter {
     height: 100%;
+    transform: translateY(0);
     border: 1px black solid;
     padding-bottom: 10px;
+   
 }
 
 .scrollable-content {
     height: 85%;
     overflow: auto;
+    transform: translateY(0);
 }
+
+/*Button Styles */
 
 ion-button.btn-red-border::part(native) {
     border-color: rgb(128, 31, 31) !important;
@@ -81,10 +100,21 @@ ion-checkbox {
     --border-color-checked: rgb(128, 31, 31);
 }
 
+ion-button.btn-default-anpg::part(native) {
+    background-color:rgb(128, 31, 31);
+    border-radius:.5rem
+  }
+  
 /**  
 ESTILOS CUSTOMIZADOS PARA LOS SELECT OPTIONS EN EL COMPONENT
-::ng-deep .alert-wrapper.sc-ion-alert-md {
-    border-radius: 17px !important;
+*/
+
+ion-select::part(icon){
+    color: rgb(128, 31, 31)!important;
+    opacity:1
+}
+ion-select::part(text){
+    color:var(--ion-color-step-400, #666666);
 }
 
-*/
+

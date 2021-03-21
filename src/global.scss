@@ -243,6 +243,7 @@ ion-alert {
     font-family: FranklinGothic-Medium;
     text-align: left;
     color: rgb(128, 31, 31);
+    font-size: 21px;
   }
   // checkbox border color
   [aria-checked="true"].sc-ion-alert-md .alert-checkbox-icon.sc-ion-alert-md {
@@ -261,16 +262,26 @@ ion-alert {
   // Height of text
   .alert-checkbox-label.sc-ion-alert-md {
     font-family: FranklinGothic-Medium;
-    color: rgb(128, 31, 31) !important;
+    color: var(--ion-color-step-250, #404040) !important;
+    font-size: 17px;
   }
   .alert-tappable.sc-ion-alert-md {
     height: 40px !important;
   }
   // Button color
-  .alert-button-inner.sc-ion-alert-md {
-    font-family: FranklinGothic-Medium;
+ 
+  .alert-button-group .alert-button-role-cancel {
+    font-family: FranklinGothicHeavy;
+    color:var(--ion-color-step-400, #666666);
+    
+  }
+  .alert-button-group > .alert-button:nth-of-type(2) {
+    font-family: FranklinGothicHeavy;
     color: rgb(128, 31, 31);
-    font-weight: bold;
-    //font-size: 18px;
+    font-weight: 700;
+  }
+   // Blurred text correction
+  .alert-checkbox-group.sc-ion-alert-md {
+    max-height: none;
   }
 }
